@@ -15,6 +15,7 @@ body
 { font: normal 80% Arial, Helvetica, sans-serif;
   color: #FFF;
   background: transparent url(../images/background.jpg) repeat;
+  background-position: center;
 }
 
 /* tell the browser to render HTML 5 elements as block */
