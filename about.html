@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -38,27 +39,15 @@
     
 	<div id="site_content">		
 
-	  <div class="sidebar_container">       
-		<div class="sidebar">
-          <div class="sidebar_item">
-            <h2>New Website</h2>
-            <p>Welcome to our new website. Please have a look around, any feedback is much appreciated.</p>
-          </div><!--close sidebar_item--> 
-        </div><!--close sidebar-->     		
-		<div class="sidebar">
-          <div class="sidebar_item">
-            <h2>Latest Update</h2>
-            <h3>December 2012</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
-		  </div><!--close sidebar_item--> 
-        </div><!--close sidebar-->
-		<div class="sidebar">
-          <div class="sidebar_item">
-            <h3>November 2012</h3>
-            <a class="twitter-timeline" data-width="320" data-height="200" data-theme="dark" href="https://twitter.com/TwitterDev">Tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>        
-		  </div><!--close sidebar_item--> 
-        </div><!--close sidebar-->  		
-       </div><!--close sidebar_container-->	
+	  <div id="site_content">		
+
+	<script> 
+          $(function(){
+          $("#importedSidebar").load("sidebar.html"); 
+          });
+        </script>
+		
+	<div id="importedSidebar"></div>	
 	
 	  <div id="content">
         <div class="content_item">
@@ -88,9 +77,6 @@
 	</div><!--close site_content-->  	
   </div><!--close main-->
  
-
-  <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.js"></script>	
   
 </body>
 </html>
