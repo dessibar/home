@@ -38,7 +38,13 @@
 	  
 	<div id="site_content">		
 
-	<link rel="import_sidebar" href="sidebar.html">	
+	<script> 
+          $(function(){
+          $("#importedSidebar").load("sidebar.html"); 
+          });
+        </script>
+		
+	<div id="importedSidebar"></div>
 	
 	  <div id="content">
         <div class="content_item">
