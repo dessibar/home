@@ -38,7 +38,6 @@ h1, h2, h3, h4, h5, h6
   margin: 0 0 10px 0;}
 
 h1, h2 {
-   color: black;
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: black;
 }
