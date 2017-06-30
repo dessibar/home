@@ -46,17 +46,17 @@
 	<div id="importedSidebar"></div>
 	
   <script language="JavaScript">
-  function processUser()
+  function processID()
   {
-
     var temp = parameters[0].split("=");
     p = unescape(temp[1]);
     document.getElementById("id").innerHTML = p;
   }
+	
   
   </script>
 
-  <h1>ID READ: document.getElementById("log").innerHTML</h1>
+  <h1>ID READ: <div id="log"></div></h1>
 
 
 
