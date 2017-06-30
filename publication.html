@@ -46,16 +46,22 @@
 	<div id="importedSidebar"></div>
 	
   <script language="JavaScript">
-  function processID()
-  {
-    var first = getUrlVars()["id"];
-    alert(first);
-  }
-	
-  
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    }
+}  
   </script>
 
-  <h1>ID READ: <script type="text/javascript"> document.write(qs("id"));</script></h1>
+  <h1>ID READ: <script> document.write(GetURLParameter(id));</script></h1>
 
 
 
