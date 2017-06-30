@@ -247,6 +247,7 @@ ul#nav li:hover a
 #content
 { width: 680px;
   margin: 0 20px 20px 0;
+  position: relative;
   float: right;}
 
 .content_item
