@@ -309,6 +309,7 @@ footer a:hover
  
  .button_small
 { font: normal 110% Arial, Helvetica, sans-serif;
+  text-align: center;
   width: 80px;
   padding: 5px 2px 7px 2px;
   background: #0043A8;
