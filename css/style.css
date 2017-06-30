@@ -273,6 +273,7 @@ ul#nav li:hover a
 .content_container
 { width: 320px;
   padding: 5px;
+  padding-top: 25px;
   position: relative;
   margin: 20px 10px 0 0;
   float: left;}
