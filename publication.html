@@ -45,17 +45,14 @@
 		
 	<div id="importedSidebar"></div>
 	
-  <script language="JavaScript">
-    var id_pub = getUrlParameter('id');
-  </script>
+ 	 <script>
+    		$(document).ready(function(){
+   		var p = getParameterByName("id");
+		$("#importedPublication").load(p + ".html"); 
+		});
+        </script>
 
-  <h1>ID READ: <script type="text/javascript">
-	  $(function(){
-	    $.url.attr('id')
-	  }
-	  </script> --- <script>$id_pub;</script></h1>
-
-
+	<div id="importedPublication"></div>
 
 
 
