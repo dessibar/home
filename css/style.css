@@ -325,7 +325,10 @@ footer a:hover
   
 .button_small a
 { color: #FFF;
-  padding-left: 5px;}
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
 
 .form_settings
 { margin: 15px 0 0 0;}
