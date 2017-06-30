@@ -48,9 +48,8 @@
   <script language="JavaScript">
   function processID()
   {
-    var temp = parameters[0].split("=");
-    p = unescape(temp[1]);
-    document.getElementById("id").innerHTML = p;
+    var first = getUrlVars()["id"];
+    alert(first);
   }
 	
   
