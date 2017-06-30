@@ -19,6 +19,16 @@ body
   background-repeat: no-repeat;  
 }
 
+.home-bg {
+background: transparent url(images/background.jpg);
+}
+.about-bg {
+background: url(images/IMG_2183.JPG);
+}
+.contact-bg {
+background: url(images/contact-bg.jpg) no-repeat center center fixed;
+}
+
 /* tell the browser to render HTML 5 elements as block */
 article, aside, figure, footer, header, hgroup, nav, section { 
   display:block;
