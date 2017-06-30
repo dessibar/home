@@ -327,7 +327,7 @@ footer a:hover
 { color: #FFF;
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  padding-left: 5px;
 }
 
 .form_settings
