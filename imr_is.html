@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <title>DESSIBAR Project</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <header>
+	  <div id="banner">
+	    <div id="welcome">
+	      <h1>DESSIBAR</h1>
+	    </div><!--close welcome-->
+	    <div id="welcome_slogan">
+	      <h6><b><span>DE</span>cision <span>S</span>upport Tools for <span>S</span>ustainable Management of Capelin Stocks in <span>I</span>celandic and <span>BAR</span>ents Sea Ecosystems</b></h6>
+	    </div><!--close welcome_slogan-->			
+	  </div><!--close banner-->
+    </header>
+
+	<nav>
+	  <div id="menubar">
+        <ul id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="software.html">Software</a></li>
+        </ul>
+      </div><!--close menubar-->	
+	</nav>
+    
+	<div id="site_content">		
+
+	  <script> 
+          $(function(){
+          $("#importedSidebar").load("sidebar.html"); 
+          });
+        </script>
+		
+	<div id="importedSidebar"></div>
+	
+	  <div id="content">
+		      &nbsp;
+		      <center><h1><img src="images/iceland.jpg" alt="imr" width="40" height="28">   Institute of Marine Research (MFRI)</h1>
+			    <a href="http://www.hafro.is/index_eng.php"><img src="images/hafro.jpg" alt="hafro" width="164" height="128"></a></center>
+		      &nbsp;
+          <p>MFRI was established 1 July 2016, by merging the Marine Research Institute (MRI, established in 1965) and the Institute of Freshwater Fisheries (established in 1946).</p>
+          <p>FMRI is a government institute under the auspices of the Ministry of Industry and Innovation. MFRI provides the Ministry with scientific advice based on its research on marine resources and the  environment.</p>
+
+          <h2><b>Participating Members</b></h2>
+          &nbsp;
+		      <li><a href="mailto:birkir.bardarson@hafogvatn.is">Bardarson, Birkir</a></li>
+          <li><a href="mailto:hoskuldur.bjornsson@hafogvatn.is">Bjornsson, Hogskuldur</a></li>
+         	<li><a href="mailto:asta.gudmundsdottir@hafogvatn.is">Gudmundsdottir, Asta</a></li>
+        	<li><a href="mailto:sigurdur.thor.jonsson@hafogvatn.is">Jonsson, Sigurdur Thor</a></li>
+        	<li><a href="mailto:thorsteinn.sigurdsson@hafogvatn.is">Sigurdsson, Thorsteinn</a></li>
+          &nbsp;
+          
+          <div class="button_small">
+		      <a href="members.html">Back</a>
+		      </div><!--close button_small-->
+
+	</div><!--close content-->   
+	</div><!--close site_content-->  	
+  </div><!--close main-->
+ 
+  <script> 
+          $(function(){
+          $("#importedFooter").load("footer.html"); 
+          });
+  </script>
+	
+  <div id="importedFooter"></div>
+  
+</body>
+</html>
