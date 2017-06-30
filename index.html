@@ -10,6 +10,29 @@
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
+
+  <script>
+$(document).ready(function(){
+var header = $('body');
+
+var backgrounds = new Array(
+    'url(/images/background.jpg)'
+  , 'url(/images/norway.jpg)'
+);
+
+var current = 0;
+
+function nextBackground() {
+    current++;
+    current = current % backgrounds.length;
+    header.css('background-image', backgrounds[current]);
+}
+setInterval(nextBackground, 1000);
+
+header.css('background-image', backgrounds[0]);
+});
+</script>
+	
 </head>
 
 <body>
