@@ -311,6 +311,9 @@ footer a:hover
 { font: normal 110% Arial, Helvetica, sans-serif;
   text-align: center;
   width: 80px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
   padding: 5px 2px 7px 2px;
   background: #0043A8;
   background: -moz-linear-gradient(#43A9FF, #0043A8);
@@ -325,8 +328,6 @@ footer a:hover
   
 .button_small a
 { color: #FFF;
-  position: absolute;
-  right: 10px;
   padding-left: 5px;
 }
 
