@@ -247,13 +247,11 @@ ul#nav li:hover a
 #content
 { width: 680px;
   margin: 0 20px 20px 0;
-  position: relative;
   float: right;}
 
 .content_item
 { width: 680px;
   margin-top: 20px;
-  position: relative;
   margin-bottom: 20px;}
  
 .content_imagetext
@@ -275,6 +273,7 @@ ul#nav li:hover a
 .content_container
 { width: 320px;
   padding: 5px;
+  position: relative;
   margin: 20px 10px 0 0;
   float: left;}
   
