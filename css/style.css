@@ -23,14 +23,31 @@ background-size: cover;
 background-repeat: no-repeat;  
 }
 .about-bg {
-background: url(../images/background.jpg);
+background: url(../images/IMG_0041.JPG);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat; 
 }
-.contact-bg {
-background: url(images/contact-bg.jpg) no-repeat center center fixed;
+.members-bg {
+background: url(../images/IMG_1576.jpg);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat; 
 }
+.publications-bg {
+background: url(../images/IMG_2138.JPG);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat; 
+}
+.software-bg {
+background: url(../images/IMG_2212.JPG);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat; 
+}
+
+
 
 /* tell the browser to render HTML 5 elements as block */
 article, aside, figure, footer, header, hgroup, nav, section { 
