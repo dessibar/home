@@ -39,9 +39,9 @@
         
       var i = 0  
         
-      do { 
+      while (latitude_int > 60) {
         
-        do {
+        while (longitude_int < -13) {
         
          var stockNumber = Math.floor(Math.random() * 20000);
          
@@ -76,7 +76,7 @@
            longitude_dec = longitude_dec - 200000;
          }
         
-        } while (longitude_int < -13);
+        } 
         
         
         if (latitude_dec < 200000){
@@ -87,7 +87,7 @@
          latitude_dec = latitude_dec - 200000;
         }
         
-      } while (latitude_int > 60);
+      } 
         
         
       function addMarker(image){
