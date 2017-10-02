@@ -42,23 +42,29 @@
         
       do { 
         
-         var stock = Math.floor(Math.random() * 20000);
+         var stockNumber = Math.floor(Math.random() * 20000);
          
-         if (stock < 10000) {
+         if (stockNumber < 14000) {
            capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_green.png';
          }
-         else if (stock < 15000) {
+         else if (stockNumber < 18000) {
            capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_yellow.png';
          }
          else {
            capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png';
          }        
         
-         var coordsString = "coords:{lat:" + latitude_int + "." + latitude_dec + ",lng:" + longitude_int + "." + longitude_dec + "}"
-         var imageString = "iconImage:'" + capelinImage + "'";
+        var stringLatitude = latitude_int + "." + latitude_dec;
+        var stringLongitude = longitude_int + "." + longitude_dec;
+        
+        var latLng = {
+           lat: contactLatitude,
+           lng: contactLongitude
+        };
+        
+        var imageString = "iconImage:'" + capelinImage + "'";
                         
-         markers.push({coordsString.valueOf(),imageString.valueOf()   
-         });  
+        addMarker(latLng, stockNumber, imageString) 
         
         if (longitude_dec < 100000){
            longitude_dec = 1000000 - longitude_dec;
@@ -167,6 +173,14 @@
         addMarker(markers[i]);
         console.log(markers[i]);
       }
+        
+      function addMarker(location, stock, image){
+        var marker = new google.maps.Marker({
+          position:location,
+          iconImage:image,
+          map:map,
+          content:stock
+        });
        
       function addMarker(props){
         var marker = new google.maps.Marker({
