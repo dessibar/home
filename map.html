@@ -37,6 +37,10 @@
       
       var capelinImage;  
       var markers = [];
+      
+      addMarker({coords:{lat:61.022328,lng:-17.311841}});
+      iconImage:'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png',
+      content:'<h1>Location: 61.022328, -17.311841; Stock Size: 19894</h1>'  
         
       var i = 0  
         
@@ -63,12 +67,8 @@
         };
         
         var imageString = "iconImage:'" + capelinImage + "'";
-             
-        console.log(latLng);
-        console.log(stockNumber);
-        console.log(imageString);
         
-        addMarker(latLng, stockNumber, imageString) 
+        addMarker({"coords:{lat:" + stringLatitude + ",lng:" + stringLongitude" + "}", "iconImage:" + capelinImage + ", content: " + stockNumber}); 
         
         if (longitude_dec < 100000){
            longitude_dec = 1000000 - longitude_dec;
