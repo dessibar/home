@@ -167,7 +167,7 @@
       
       for(var i = 0;i < markers.length;i++){
         addMarker(markers[i]);
-        console.log(i);
+        console.log(markers[i]);
       }
        
       function addMarker(props){
@@ -176,8 +176,6 @@
           map:map,
           icon:props.iconImage
         });
-        
-        console.log(marker);
 
         // Check content
         if(props.content){
