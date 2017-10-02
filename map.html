@@ -64,13 +64,19 @@
       }
        
       function addMarker(props){
-         var marker = new google.maps.Marker({
-           position:props.coords,
-           map:map,
-           icon:props.iconImage
-         });
-      }
-        
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
         if(props.content){
           var infoWindow = new google.maps.InfoWindow({
             content:props.content
@@ -80,6 +86,7 @@
             infoWindow.open(map, marker);
           });
         }
+      }
    }
    </script>
 
