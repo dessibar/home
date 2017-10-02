@@ -179,10 +179,10 @@
         console.log(markers[i]);
       }
         
-      function addMarker(imageString){
+      function addMarker(image){
         var marker = new google.maps.Marker({
           position:latLng,
-          iconImage:imageString,
+          iconImage:image,
           map:map,
           content:stockNumber
         });
