@@ -30,8 +30,66 @@
       
       var map = new google.maps.Map(document.getElementById('map'), options);
         
+      var latitude_int = 62;
+      var latitude_dec = 746852;
+      var longitude_int = -17;
+      var longitude_dec = 614076;
         
-      var markers = [
+      60.064181, -12.175970
+      
+      var capelinImage;  
+      var markers = [];
+        
+      do {
+        
+        do {
+        
+          
+         var stock = Math.floor(Math.random() * 20000);
+         
+         if (stock < 3000) {
+           capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_green.png';
+         }
+         else if (stock < 10000) {
+           capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_yellow.png';
+         }
+         else {
+           capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png';
+         }        
+         
+          
+         coords:{lat:63.049766,lng:-17.614076},
+         var coordsString = "coords:{lat:" + latitude_int + "." + latitude_dec + ",lng:" + longitude_int + "." + longitude_dec;
+         var imageString = "iconImage:'" + capelinImage + "'";
+          
+         markers.push({
+           coordsString,
+           imageString           
+         })
+         
+         if (longitude_dec < 100000){
+           longitude_dec = 1000000 - longitude_dec;
+           longitude_int = longitude_int + 1;
+           }
+         else {
+           longitude_dec = longitude_dec - 100000;
+         }
+         while (latitude_int != -11);
+          
+        
+         
+      if (latitude_dec < 100000){
+         latitude_dec = 1000000 - latitude_dec;
+         latitude_int = latitude_int - 1;
+      }
+       else {
+         latitude_dec = latitude_dec - 100000;
+      }
+      while (latitude_int != 59);  
+        
+      
+       
+      <!--  
         
       {
         coords:{lat:63.049766,lng:-17.614076},
@@ -56,9 +114,11 @@
         iconImage:'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png',
         content:'<h1>Location: 61.022328, -17.311841; Stock Size: 19894</h1>'
       },
-
-      ];
+      
+      
+      -->
         
+      
       for(var i = 0;i < markers.length;i++){
         addMarker(markers[i]);
       }
