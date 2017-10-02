@@ -69,7 +69,7 @@
         
         var imageString = "iconImage:'" + capelinImage + "'";
         
-        addMarker({"coords:{lat:" + stringLatitude + ",lng:" + stringLongitude" + "}", "iconImage:" + capelinImage + ", content: " + stockNumber}); 
+        addMarker(imageString); 
         
         if (longitude_dec < 100000){
            longitude_dec = 1000000 - longitude_dec;
@@ -179,33 +179,15 @@
         console.log(markers[i]);
       }
         
-      function addMarker(location, stock, image){
+      function addMarker(imageString){
         var marker = new google.maps.Marker({
-          position:location,
-          iconImage:image,
+          position:latLng,
+          iconImage:imageString,
           map:map,
-          content:stock
+          content:stockNumber
         });
       }
-       
-      function addMarker(props){
-        var marker = new google.maps.Marker({
-          position:props.coords,
-          map:map,
-          icon:props.iconImage
-        });
-
-        // Check content
-        if(props.content){
-          var infoWindow = new google.maps.InfoWindow({
-            content:props.content
-          });
-
-          marker.addListener('click', function(){
-            infoWindow.open(map, marker);
-          });
-        }
-      }
+      
    }
    </script>
 
