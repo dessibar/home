@@ -174,14 +174,10 @@
         var marker = new google.maps.Marker({
           position:props.coords,
           map:map,
-          //icon:props.iconImage
+          icon:props.iconImage
         });
-
-        // Check for customicon
-        if(props.iconImage){
-          // Set icon image
-          marker.setIcon(props.iconImage);
-        }
+        
+        console.log(marker);
 
         // Check content
         if(props.content){
