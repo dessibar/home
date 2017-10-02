@@ -56,16 +56,11 @@
          
          var coordsString = "coords:{lat:" + latitude_int + "." + latitude_dec + ",lng:" + longitude_int + "." + longitude_dec + "},"
          var imageString = "iconImage:'" + capelinImage + "'";
-         
-         console.log(coordsString);
-         console.log(imageString);
         
          markers.push({
            coordsString,
            imageString           
          });  
-        
-        console.log(markers);
         
         if (longitude_dec < 100000){
            longitude_dec = 1000000 - longitude_dec;
@@ -84,8 +79,6 @@
         }
         
       i = i + 1;
-        
-      console.log(i);  
         
       } while (i<10);
         
@@ -174,6 +167,7 @@
       
       for(var i = 0;i < markers.length;i++){
         addMarker(markers[i]);
+        console.log(i);
       }
        
       function addMarker(props){
