@@ -54,12 +54,12 @@
            capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png';
          }        
         
-         var coordsString = "coords:{lat:" + latitude_int + "." + latitude_dec + ",lng:" + longitude_int + "." + longitude_dec + "}"
+         var coordsString = "coords:{lat:" + latitude_int + "." + latitude_dec + ",lng:" + longitude_int + "." + longitude_dec + "},"
          var imageString = "iconImage:'" + capelinImage + "'";
                         
          markers.push({
-           coordsString,
-           imageString       
+           coordsString.valueOf();
+           imageString.valueOf();       
          });  
         
         if (longitude_dec < 100000){
