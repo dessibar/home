@@ -63,8 +63,8 @@
         var stringLongitude = longitude_int + "." + longitude_dec;
         
         var latLng = {
-           lat: stringLatitude,
-           lng: stringLongitude
+           lat: Number(stringLatitude),
+           lng: Number(stringLongitude)
         };
         
         var imageString = "iconImage:'" + capelinImage + "'";
