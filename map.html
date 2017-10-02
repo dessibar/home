@@ -38,6 +38,53 @@
       var capelinImage;  
       var markers = [];
         
+      var i = 0  
+        
+      do { 
+        
+         var stock = Math.floor(Math.random() * 20000);
+         
+         if (stock < 3000) {
+           capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_green.png';
+         }
+         else if (stock < 10000) {
+           capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_yellow.png';
+         }
+         else {
+           capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png';
+         }        
+         
+         var coordsString = "coords:{lat:" + latitude_int + "." + latitude_dec + ",lng:" + longitude_int + "." + longitude_dec;
+         var imageString = "iconImage:'" + capelinImage + "'";
+          
+         markers.push({
+           coordsString,
+           imageString           
+         });  
+        
+        if (longitude_dec < 100000){
+           longitude_dec = 1000000 - longitude_dec;
+           longitude_int = longitude_int + 1;
+           }
+         else {
+           longitude_dec = longitude_dec - 100000;
+         }
+        
+        if (latitude_dec < 100000){
+         latitude_dec = 1000000 - latitude_dec;
+         latitude_int = latitude_int - 1;
+        }
+        else {
+         latitude_dec = latitude_dec - 100000;
+        }
+        
+      i = i + 1;
+        
+      } while (i<10)
+        
+        
+      /*
+        
       do {
         
         do {        
@@ -86,7 +133,7 @@
       }
       while (latitude_int != 61);  
         
-      
+      */
        
       /* 
         
