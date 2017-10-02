@@ -56,11 +56,16 @@
          
          var coordsString = "coords:{lat:" + latitude_int + "." + latitude_dec + ",lng:" + longitude_int + "." + longitude_dec;
          var imageString = "iconImage:'" + capelinImage + "'";
-          
+         
+         console.log(coordsString);
+         console.log(imageString);
+        
          markers.push({
            coordsString,
            imageString           
          });  
+        
+        console.log(markers);
         
         if (longitude_dec < 100000){
            longitude_dec = 1000000 - longitude_dec;
