@@ -41,22 +41,19 @@
         
       do { 
         
+        do {
+        
          var stockNumber = Math.floor(Math.random() * 20000);
          
          if (stockNumber < 14000) {
-           var capelinImage = {
-             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_green.png'
-           }
+           var capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_green.png';
          }
          else if (stockNumber < 18000) {
-           var capelinImage = {
-             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_yellow.png'
-           }
+           var capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_yellow.png';
+
          }
          else {
-           var capelinImage = {
-             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png'
-           }
+           var capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png';
          }        
         
         var stringLatitude = latitude_int + "." + latitude_dec;
@@ -80,6 +77,9 @@
            longitude_dec = longitude_dec - 100000;
          }
         
+        } while (longitude_int < -13);
+        
+        
         if (latitude_dec < 100000){
          latitude_dec = 900000 + latitude_dec;
          latitude_int = latitude_int - 1;
@@ -88,9 +88,7 @@
          latitude_dec = latitude_dec - 100000;
         }
         
-      i = i + 1;
-        
-      } while (i<20);
+      } while (latitude_int > 60);
         
         
       /*
@@ -178,7 +176,7 @@
         console.log(image);
         var marker = new google.maps.Marker({
           position:latLng,
-          icon:'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_green.png',
+          icon:image,
           map:map,
         });
       }
