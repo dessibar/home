@@ -71,23 +71,23 @@
         
         addMarker(capelinImage); 
         
-        if (longitude_dec < 200000){
-           longitude_dec = 800000 + longitude_dec;
+        if (longitude_dec < 100000){
+           longitude_dec = 900000 + longitude_dec;
            longitude_int = longitude_int + 1;
            }
          else {
-           longitude_dec = longitude_dec - 200000;
+           longitude_dec = longitude_dec - 100000;
          }
         
         } 
         
         
-        if (latitude_dec < 200000){
-         latitude_dec = 800000 + latitude_dec;
+        if (latitude_dec < 100000){
+         latitude_dec = 900000 + latitude_dec;
          latitude_int = latitude_int - 1;
         }
         else {
-         latitude_dec = latitude_dec - 200000;
+         latitude_dec = latitude_dec - 100000;
         }
         
       } 
