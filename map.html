@@ -58,8 +58,17 @@
            var capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin_red.png';
          }        
         
-        var stringLatitude = latitude_int + "." + latitude_dec;
-        var stringLongitude = longitude_int + "." + longitude_dec;
+        if (latitude_dec < 100000) {
+           var stringLatitude = latitude_int + ".0" + latitude_dec;  
+        } else {
+           var stringLatitude = latitude_int + "." + latitude_dec;  
+        }
+
+        if (longitude_dec < 100000) {
+           var stringLongitude = longitude_int + ".0" + longitude_dec;
+        } else {
+           var stringLongitude = longitude_int + "." + longitude_dec;
+        }
         
         console.log(stringLatitude);
         console.log(stringLongitude);
