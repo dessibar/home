@@ -114,8 +114,11 @@
           map:map,
         });
         
-        var content = "Position: " + latLng + " - Capelin Stock: " + stock
-        
+        var content = '<div id="iw-container">' +
+                    '<div class="iw-title">Position: ' + latLng + '</div>' +
+                    '<div class="iw-subTitle">' + stock + '</div> +
+                    '</div>';
+                     
         if (infowindow) {
            infowindow.close();
         }
