@@ -110,6 +110,8 @@
           map:map,
         });
         
+        var content = "Position: " + latLng + " - Capelin Stock: " + stock
+        
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
         return function() {
           infowindow.setContent(content);
