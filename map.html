@@ -74,15 +74,12 @@
            var stringLongitude = longitude_int + "." + longitude_dec;
         }
         
-        console.log(stringLatitude);
-        console.log(stringLongitude);
-        
         var latLng = {
            lat: Number(stringLatitude),
            lng: Number(stringLongitude)
         };
         
-        addMarker(capelinImage,stockNumber); 
+        addMarker(capelinImage,stockNumber, latLng); 
         
         if (longitude_dec < 100000){
            longitude_dec = 900000 + longitude_dec;
@@ -106,15 +103,18 @@
       } 
         
         
-      function addMarker(image,stock){
-        console.log(image);
+      function addMarker(image,stock,latLng){
         var marker = new google.maps.Marker({
           position:latLng,
           icon:image,
           map:map,
         });
         
-        var content = "Position: " + this.position + " - Capelin Stock: " + stock
+        var content = "Position: " + latLng + " - Capelin Stock: " + stock
+        
+        if (infowindow) {
+           infowindow.close();
+        }
         var infowindow = new google.maps.InfoWindow()
         
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
