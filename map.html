@@ -131,14 +131,14 @@
         })(marker,content,infowindow));
        
         google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
-  });
+          infowindow.open(map,marker);
+        });
 
-  // Event that closes the Info Window with a click on the map
-  google.maps.event.addListener(map, 'click', function() {
-    infowindow.close();
-  });
-      
+        // Event that closes the Info Window with a click on the map
+        google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
+        });
+  }    
 }
       
    </script>
