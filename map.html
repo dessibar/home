@@ -121,10 +121,6 @@
                     '<div class="iw-subTitle">Stock: ' + stock + '</div>' +
                     '</div>';
                      
-        if (infowindow) {
-           infowindow.close();
-        }
-        var infowindow = new google.maps.InfoWindow()
         
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
         return function() {
