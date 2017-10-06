@@ -26,7 +26,7 @@
          var options = {
             zoom:6,
             center:{lat:62.641066,lng:-12.704159}
-      }
+      }  
       
       var map = new google.maps.Map(document.getElementById('map'), options);
         
@@ -78,7 +78,7 @@
            lng: Number(stringLongitude)
         };
         
-        addMarker(capelinImage); 
+        addMarker(capelinImage,stockNumber); 
         
         if (longitude_dec < 100000){
            longitude_dec = 900000 + longitude_dec;
@@ -102,14 +102,24 @@
       } 
         
         
-      function addMarker(image){
+      function addMarker(image,stock){
         console.log(image);
         var marker = new google.maps.Marker({
           position:latLng,
           icon:image,
           map:map,
         });
+        
+        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+        return function() {
+          infowindow.setContent(content);
+          infowindow.open(map,marker);
+          };
+        })(marker,content,infowindow));
+        
       }
+        
+      
       
    }
    </script>
