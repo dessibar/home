@@ -45,6 +45,7 @@
       var capelinImage;  
         
       var i = 0  
+      var latLng
         
       while (latitude_int > 60) {
         
@@ -77,7 +78,7 @@
            var stringLongitude = longitude_int + "." + longitude_dec;
         }
         
-        var latLng = {
+        latLng = {
            lat: Number(stringLatitude),
            lng: Number(stringLongitude)
         };
