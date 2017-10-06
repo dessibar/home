@@ -117,8 +117,9 @@
         });
         
         var content = '<div id="iw-container">' +
-                    '<div class="iw-title">Position: ' + JSON.stringify(latLng) + '</div>' +
-                    '<div class="iw-subTitle">Capelin Stock: ' + stock + '</div>' +
+                    '<div class="iw-title">Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</div>' +
+                    '<div class="iw-title">Capelin Stock: ' + stock + '</div>' +
+                    '<div class="iw-bottom-gradient"></div>' +
                     '</div>';
                      
         
