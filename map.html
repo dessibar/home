@@ -31,6 +31,8 @@
             zoom:6,
             center:{lat:62.641066,lng:-12.704159}
       }  
+         
+      var infowindow = new google.maps.InfoWindow();
       
       var map = new google.maps.Map(document.getElementById('map'), options);
         
@@ -116,7 +118,7 @@
         
         var content = '<div id="iw-container">' +
                     '<div class="iw-title">Position: ' + latLng + '</div>' +
-                    '<div class="iw-subTitle">' + stock + '</div> +
+                    '<div class="iw-subTitle">Stock: ' + stock + '</div>' +
                     '</div>';
                      
         if (infowindow) {
@@ -127,7 +129,7 @@
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
         return function() {
           infowindow.setContent(content);
-          infowindow.open(map,marker);
+          infowindow.open(map,this);
           };
         })(marker,content,infowindow));
         
