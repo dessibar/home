@@ -116,10 +116,10 @@
           map:map,
         });
         
-        var content = 
+        var content = '<div class="iw-container">' +
                     '<div class="iw-title">Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</div>' +
                     '<div class="iw-title">Capelin Stock: ' + stock + '</div>' +
-                    '<div class="iw-bottom-gradient"></div>';
+                    '</div>';
                      
         
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
