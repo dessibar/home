@@ -425,6 +425,11 @@ ul img {
 
 .gm-style-iw{
     width:100%;
+    text-align:center;
     color:black;
     background:FFFFFF;    
+}
+
+#infoWindow-Title{
+    color:black;
 }
