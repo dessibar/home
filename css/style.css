@@ -424,14 +424,14 @@ ul img {
   text-shadow: 1px 1px #000;}
 
 .gm-style-iw{
+    width:300px;
     text-align:center;
-    color:black;
     background:FFFFFF;    
 }
 
 #positionContent{
     font-family: "Verdana", Verdana, sans-serif;
-    font-size: 135%;
+    font-size: 125%;
     text-align:center;
     color:red;
     font-weight: bold;
@@ -439,7 +439,7 @@ ul img {
 
 #stockContent{
     font-family: "Verdana", Verdana, sans-serif;
-    font-size: 135%;
+    font-size: 125%;
     text-align:center;
     color:blue;
     font-weight: bold;
