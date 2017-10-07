@@ -424,7 +424,8 @@ ul img {
   text-shadow: 1px 1px #000;}
 
 .gm-style-iw{
-    width:100%;
+    width:300px;
+    height:200px;
     text-align:center;
     color:black;
     background:FFFFFF;    
@@ -433,7 +434,7 @@ ul img {
 #positionContent{
     font-family: "Verdana", Verdana, sans-serif;
     font-size: 135%;
-    text-align:left;
+    text-align:center;
     color:red;
     font-weight: bold;
 }
@@ -441,7 +442,7 @@ ul img {
 #stockContent{
     font-family: "Verdana", Verdana, sans-serif;
     font-size: 135%;
-    text-align:left;
+    text-align:center;
     color:blue;
     font-weight: bold;
 }
