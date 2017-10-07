@@ -135,9 +135,10 @@
       '(last visited June 22, 2009).</p>'+
       '</div>'+
       '</div>';
-            
+      
+        
         /*
-            
+       
             
             '<div class="iw-container">' +
                     '<div class="iw-subtitle">Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</div>' +
@@ -152,6 +153,7 @@
           infowindow.setContent(content);
           infowindow.open(map,this);
           };
+        $infoWindowContent.width($infoWindowContent.width());
         })(marker,content,infowindow));
        
         google.maps.event.addListener(marker, 'click', function() {
