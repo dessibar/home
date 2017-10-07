@@ -55,13 +55,22 @@
          var stockNumber = Math.floor(Math.random() * 20000);
          
          if (stockNumber < 14000) {
-           var capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green.png';
+           var capelinImage = {
+             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green.png',
+             scaledSize: new google.maps.Size(50, 50)
+           };
          }
          else if (stockNumber < 18000) {
-           var capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-yellow.png';
+           var capelinImage = {
+             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-yellow.png',
+             scaledSize: new google.maps.Size(50, 50)
+           }
          }
          else {
-           var capelinImage = 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-red.png';
+           var capelinImage = {
+             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-red.png',
+             scaledSize: new google.maps.Size(50, 50)
+           }
          }        
         
         if (latitude_dec < 100000) {
