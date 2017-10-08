@@ -27,6 +27,9 @@
    <input type="file" id="files" name="files[]" multiple />
    <output id="list"></output>
 
+	
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
    <script>
      function handleFileSelect(evt) {
         var files = evt.target.files; // FileList object
@@ -40,37 +43,46 @@
         }
         document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
         
-        var book=(new ActiveXObject("Excel.Application")).Workbooks.Open(files[0]);
-        var cells=book.Sheets.Item(1).cells;
-        alert(cells.item(2,1), cells.item(2,2));
+	     
+	     
+	     
+	     
+        var ExcelToJSON = function() {
+
+  	this.parseExcel = function(files[0]) {
+ 	   var reader = new FileReader();
+
+  	  reader.onload = function(e) {
+	      var data = e.target.result();
+	      var workbook = XLSX.read(data, {
+ 	       type: 'binary'
+	      });
+
+	      workbook.SheetNames.forEach(function(sheetName) {
+ 	       // Here is your object
+	       var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+ 	       var json_object = JSON.stringify(XL_row_object);
+	        console.log(json_object);
+
+   	   })
+		
+  	  };
+
+ 	   reader.onerror = function(ex) {
+  	    console.log(ex);
+  	  };
+
+  	  reader.readAsBinaryString(file);
+ 	 };
+	};
+	  
         
      }
      document.getElementById('files').addEventListener('change', handleFileSelect, false);
    </script>
    
-   /*
-   
-1 one	http://site1
-2 two	http://site2
-3 three	http://site3
-4 four	http://site4
-5 five	http://site5
-var book=(new ActiveXObject("Excel.Application")).Workbooks.Open(files[0]);
-var cells=book.Sheets.Item(1).cells;	// all cells
 	
-var feedName="three";
-var feedUrl="";
 	
-for(var i=1;i<5;i++)	// i - row
-	if(feedName==cells.item(i,1))	// 1 column (A) - name
-		feedUrl=cells.item(i,2);	// 2 column (B) - link
-			
-if(feedUrl!="")
-	(new ActiveXObject("WScript.Shell")).popup(feedUrl);	//http://site3		// header.innerHTML=feedUrl;	
-book.Close();
-
-   */
-   
    
    <div id="map"></div>
    <script>
