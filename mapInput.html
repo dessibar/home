@@ -42,7 +42,7 @@
         
         var book=(new ActiveXObject("Excel.Application")).Workbooks.Open(files[0]);
         var cells=book.Sheets.Item(1).cells;
-        (new ActiveXObject("WScript.Shell")).popup(cells.item(2,1));
+        alert(cells.item(2,1), cells.item(2,2));
         
      }
      document.getElementById('files').addEventListener('change', handleFileSelect, false);
