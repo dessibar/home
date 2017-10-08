@@ -1,0 +1,208 @@
+<!DOCTYPE html> 
+<html class="home-bg">
+
+<head>
+  <title>DESSIBAR Project</title>
+  <style>
+      #map {
+        position:center;
+        height: 400px;
+        width: 50%;
+      }
+  </style>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <!-- <script type="text/javascript" src="js/modernizr-1.5.min.js"></script> -->
+
+</head>
+
+<body>
+  
+  
+
+   <h1>Icelandic and Barents Sea Stock Visualization Tool</h1>
+   
+   <input type="file" id="files" name="files[]" multiple />
+   <output id="list"></output>
+
+   <script>
+     function handleFileSelect(evt) {
+        var files = evt.target.files; // FileList object
+        // files is a FileList of File objects. List some properties.
+        var output = [];
+        for (var i = 0, f; f = files[i]; i++) {
+        output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+        }
+        document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+        
+        var book=(new ActiveXObject("Excel.Application")).Workbooks.Open(files[0]);
+        var cells=book.Sheets.Item(1).cells;
+        (new ActiveXObject("WScript.Shell")).popup(cells.item(2,1);
+        
+     }
+     document.getElementById('files').addEventListener('change', handleFileSelect, false);
+   </script>
+   
+   */
+   
+1 one	http://site1
+2 two	http://site2
+3 three	http://site3
+4 four	http://site4
+5 five	http://site5
+var book=(new ActiveXObject("Excel.Application")).Workbooks.Open(files[0]);
+var cells=book.Sheets.Item(1).cells;	// all cells
+	
+var feedName="three";
+var feedUrl="";
+	
+for(var i=1;i<5;i++)	// i - row
+	if(feedName==cells.item(i,1))	// 1 column (A) - name
+		feedUrl=cells.item(i,2);	// 2 column (B) - link
+			
+if(feedUrl!="")
+	(new ActiveXObject("WScript.Shell")).popup(feedUrl);	//http://site3		// header.innerHTML=feedUrl;	
+book.Close();
+
+   /*
+   
+   
+   <div id="map"></div>
+   <script>
+     
+      function initMap(){
+         var options = {
+            zoom:6,
+            center:{lat:62.641066,lng:-12.704159}
+      }  
+         
+      var infowindow = new google.maps.InfoWindow();
+      
+      var map = new google.maps.Map(document.getElementById('map'), options);
+        
+      var latitude_int = 62;
+      var latitude_dec = 746852;
+      var longitude_int = -17;
+      var longitude_dec = 614076;
+      
+      var capelinImage;  
+        
+      var i = 0  
+      var latLng
+        
+      while (latitude_int > 60) {
+        
+        var longitude_int = -17;
+        var longitude_dec = 614076;
+        
+        while (longitude_int < -13) {
+        
+         var stockNumber = Math.floor(Math.random() * 20000);
+         
+         if (stockNumber < 14000) {
+           var capelinImage = {
+             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
+             scaledSize: new google.maps.Size(50, 50)
+           };
+         }
+         else if (stockNumber < 18000) {
+           var capelinImage = {
+             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-yellow-tilted.png',
+             scaledSize: new google.maps.Size(50, 50)
+           }
+         }
+         else {
+           var capelinImage = {
+             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-red-tilted.png',
+             scaledSize: new google.maps.Size(50, 50)
+           }
+         }        
+        
+        if (latitude_dec < 100000) {
+           var stringLatitude = latitude_int + ".0" + latitude_dec;  
+        } else {
+           var stringLatitude = latitude_int + "." + latitude_dec;  
+        }
+        if (longitude_dec < 100000) {
+           var stringLongitude = longitude_int + ".0" + longitude_dec;
+        } else {
+           var stringLongitude = longitude_int + "." + longitude_dec;
+        }
+        
+        latLng = {
+           lat: Number(stringLatitude),
+           lng: Number(stringLongitude)
+        };
+        
+        addMarker(capelinImage,stockNumber, latLng); 
+        
+        if (longitude_dec < 200000){
+           longitude_dec = 800000 + longitude_dec;
+           longitude_int = longitude_int + 1;
+           }
+         else {
+           longitude_dec = longitude_dec - 200000;
+         }
+        
+        } 
+        
+        
+        if (latitude_dec < 200000){
+         latitude_dec = 800000 + latitude_dec;
+         latitude_int = latitude_int - 1;
+        }
+        else {
+         latitude_dec = latitude_dec - 200000;
+        }
+        
+      } 
+        
+      google.maps.event.addListenerOnce(map, 'idle', function(){
+      jQuery('.gm-style-iw').prev('div').remove();
+      }); 
+        
+      function addMarker(image,stock,latLng){
+        var marker = new google.maps.Marker({
+          position:latLng,
+          icon:image,
+          map:map,
+        });
+        
+        var content = '<div id="content">'+
+      '<div id="bodyContent">'+
+      '<div id="positionContent"><p>Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</p></div>' +
+      '<div id="stockContent"><p>Capelin Stock: ' + stock + '</p></div>' 
+      '</div>'+
+      '</div>';                     
+        
+        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+        return function() {
+          infowindow.setContent(content);
+          infowindow.open(map,this);
+          };
+        $infoWindowContent.width($infoWindowContent.width());
+        })(marker,content,infowindow));
+       
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+        // Event that closes the Info Window with a click on the map
+        google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
+        });
+  }    
+}
+      
+   </script>
+
+   <script async defer 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD27I7bId1Hmqthv5gTTh15GKAgkiFM538&callback=initMap">
+      </script>
+  
+</body>
+</html>
