@@ -68,7 +68,7 @@
 	   
 	function myFunction(xml) {
 	console.log("ENTRO A LA FUNCION");
-  	var x, y, i, xmlDoc, txt;
+  	var stockNumber, latLng, x, y, i, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
 	console.log(xml.responseXML);
   	txt = "";
@@ -100,11 +100,11 @@
 	document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
 	   
-	      function initMap(){
-         var options = {
+	function initMap(){
+        var options = {
             zoom:6,
             center:{lat:62.641066,lng:-12.704159}
-      }  
+        }  
          
       var infowindow = new google.maps.InfoWindow();
       
