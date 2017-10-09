@@ -64,6 +64,8 @@
   	for (i = 0; i< x.length; i++) {
   	  txt += x[i].childNodes[0].nodeValue + "<br>";
 	  txt += y[i].childNodes[0].nodeValue + "<br>";
+          console.log(x[i].childNodes[0].nodeValue + "<br>");
+	  console.log(y[i].childNodes[0].nodeValue + "<br>");
   	}
   	document.getElementById("map").innerHTML = txt;
 	}
