@@ -28,10 +28,13 @@
    
    <input type="file" id="files" name="files[]" multiple />
    <output id="list"></output>
+	
+   <div id="map"></div>
 
 	
    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+	
    <script>
      function handleFileSelect(evt) {
         var files = evt.target.files; // FileList object
@@ -71,11 +74,23 @@
   	txt = "";
   	x = xmlDoc.getElementsByTagName("lat_start");
 	y = xmlDoc.getElementsByTagName("lon_start");
+	z = xmlDoc.getElementsByTagName("sa");
   	for (i = 0; i< x.length; i++) {
   	  txt += x[i].childNodes[0].nodeValue + "<br>";
 	  txt += y[i].childNodes[0].nodeValue + "<br>";
+          txt += z[i].childNodes[0].nodeValue + "<br>";
           console.log(x[i].childNodes[0].nodeValue + "<br>");
 	  console.log(y[i].childNodes[0].nodeValue + "<br>");
+	  console.log(z[i].childNodes[0].nodeValue + "<br>");
+		
+	  stocknumber = z[i].childNodes[0].nodeValue;
+		
+	  latLng = {
+           lat: Number(x[i].childNodes[0].nodeValue),
+           lng: Number(y[i].childNodes[0].nodeValue)
+          };
+		
+          addMarker(stockNumber, latLng); 
   	}
 
   	document.getElementById("acousticText").innerHTML = txt;
@@ -83,16 +98,9 @@
 	}
 	     
 	document.getElementById('files').addEventListener('change', handleFileSelect, false);
-	     
-   </script>
-   
-	
-	
-   
-   <div id="map"></div>
-   <script>
-     
-      function initMap(){
+
+	   
+	      function initMap(){
          var options = {
             zoom:6,
             center:{lat:62.641066,lng:-12.704159}
@@ -102,91 +110,15 @@
       
       var map = new google.maps.Map(document.getElementById('map'), options);
         
-      var latitude_int = 62;
-      var latitude_dec = 746852;
-      var longitude_int = -17;
-      var longitude_dec = 614076;
-      
-      var capelinImage;  
-        
-      var i = 0  
-      var latLng
-        
-      while (latitude_int > 60) {
-        
-        var longitude_int = -17;
-        var longitude_dec = 614076;
-        
-        while (longitude_int < -13) {
-        
-         var stockNumber = Math.floor(Math.random() * 20000);
-         
-         if (stockNumber < 14000) {
-           var capelinImage = {
-             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
-             scaledSize: new google.maps.Size(50, 50)
-           };
-         }
-         else if (stockNumber < 18000) {
-           var capelinImage = {
-             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-yellow-tilted.png',
-             scaledSize: new google.maps.Size(50, 50)
-           }
-         }
-         else {
-           var capelinImage = {
-             url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-red-tilted.png',
-             scaledSize: new google.maps.Size(50, 50)
-           }
-         }        
-        
-        if (latitude_dec < 100000) {
-           var stringLatitude = latitude_int + ".0" + latitude_dec;  
-        } else {
-           var stringLatitude = latitude_int + "." + latitude_dec;  
-        }
-        if (longitude_dec < 100000) {
-           var stringLongitude = longitude_int + ".0" + longitude_dec;
-        } else {
-           var stringLongitude = longitude_int + "." + longitude_dec;
-        }
-        
-        latLng = {
-           lat: Number(stringLatitude),
-           lng: Number(stringLongitude)
-        };
-        
-        addMarker(capelinImage,stockNumber, latLng); 
-        
-        if (longitude_dec < 200000){
-           longitude_dec = 800000 + longitude_dec;
-           longitude_int = longitude_int + 1;
-           }
-         else {
-           longitude_dec = longitude_dec - 200000;
-         }
-        
-        } 
-        
-        
-        if (latitude_dec < 200000){
-         latitude_dec = 800000 + latitude_dec;
-         latitude_int = latitude_int - 1;
-        }
-        else {
-         latitude_dec = latitude_dec - 200000;
-        }
-        
-      } 
         
       google.maps.event.addListenerOnce(map, 'idle', function(){
       jQuery('.gm-style-iw').prev('div').remove();
       }); 
         
-      function addMarker(image,stock,latLng){
+      function addMarker(stock,latLng){
         var marker = new google.maps.Marker({
           position:latLng,
-          icon:image,
+          icon:'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
           map:map,
         });
         
@@ -212,10 +144,11 @@
         google.maps.event.addListener(map, 'click', function() {
         infowindow.close();
         });
-  }    
-}
-      
+  	}    
+	}
+	   
    </script>
+
 
    <script async defer 
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD27I7bId1Hmqthv5gTTh15GKAgkiFM538&callback=initMap">
