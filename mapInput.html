@@ -36,6 +36,24 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
 	
    <script>
+	   
+     function initMap(){
+        var options = {
+            zoom:6,
+            center:{lat:62.641066,lng:-12.704159}
+        }  
+         
+        var infowindow = new google.maps.InfoWindow();
+      
+        var map = new google.maps.Map(document.getElementById('map'), options);
+        
+        
+        google.maps.event.addListenerOnce(map, 'idle', function(){
+        jQuery('.gm-style-iw').prev('div').remove();
+        }); 
+		
+     }	   
+	   
      function handleFileSelect(evt) {
         var files = evt.target.files; // FileList object
         // files is a FileList of File objects. List some properties.
@@ -99,23 +117,6 @@
 	     
 	document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
-	   
-	function initMap(){
-        var options = {
-            zoom:6,
-            center:{lat:62.641066,lng:-12.704159}
-        }  
-         
-        var infowindow = new google.maps.InfoWindow();
-      
-        var map = new google.maps.Map(document.getElementById('map'), options);
-        
-        
-        google.maps.event.addListenerOnce(map, 'idle', function(){
-        jQuery('.gm-style-iw').prev('div').remove();
-        }); 
-		
-	}
         
       function addMarker(stock,latLng){
         var marker = new google.maps.Marker({
@@ -138,9 +139,10 @@
           infowindow.setContent(content);
           infowindow.open(map,this);
           };
+		
         $infoWindowContent.width($infoWindowContent.width());
         })(marker,content,infowindow));
-       
+   
         google.maps.event.addListener(marker, 'click', function() {
           infowindow.open(map,marker);
         });
