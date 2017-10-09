@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<echosounder_dataset>
+  <nation>NO</nation>
+  <platform>LDGJ</platform>
+  <distance_list>
+    <distance start_time="0028-02-06 21:42:00" log_start="460">
+      <integrator_dist>1.0</integrator_dist>
+      <pel_ch_thickness>341.0</pel_ch_thickness>
+      <lat_start>79.68</lat_start>
+      <lon_start>34.48</lon_start>
+      <frequency freq="38000" transceiver="1">
+        <num_pel_ch>1</num_pel_ch>
+        <ch_type type="P">
+          <sa_by_acocat acocat="8">
+            <sa ch="1">19.0</sa>
+          </sa_by_acocat>
+          <sa_by_acocat acocat="100">
+            <sa ch="1">76.0</sa>
+          </sa_by_acocat>
+        </ch_type>
+      </frequency>
+    </distance>
+    <distance start_time="0028-02-06 21:48:00" log_start="461">
+      <integrator_dist>1.0</integrator_dist>
+      <pel_ch_thickness>336.0</pel_ch_thickness>
+      <lat_start>79.697</lat_start>
+      <lon_start>34.483</lon_start>
+      <frequency freq="38000" transceiver="1">
+        <num_pel_ch>1</num_pel_ch>
+        <ch_type type="P">
+          <sa_by_acocat acocat="8">
+            <sa ch="1">4777.0</sa>
+          </sa_by_acocat>
+          <sa_by_acocat acocat="100">
+            <sa ch="1">4844.0</sa>
+          </sa_by_acocat>
+        </ch_type>
+      </frequency>
+    </distance>
+    <distance start_time="0028-02-06 21:54:00" log_start="462">
+      <integrator_dist>1.0</integrator_dist>
+      <pel_ch_thickness>336.0</pel_ch_thickness>
+      <lat_start>79.713</lat_start>
+      <lon_start>34.485</lon_start>
+      <frequency freq="38000" transceiver="1">
+        <num_pel_ch>1</num_pel_ch>
+        <ch_type type="P">
+          <sa_by_acocat acocat="8">
+            <sa ch="1">28.0</sa>
+          </sa_by_acocat>
+          <sa_by_acocat acocat="100">
+            <sa ch="1">89.0</sa>
+          </sa_by_acocat>
+        </ch_type>
+      </frequency>
+    </distance>
+    <distance start_time="0028-02-06 22:00:00" log_start="463">
+      <integrator_dist>1.0</integrator_dist>
+      <pel_ch_thickness>343.0</pel_ch_thickness>
+      <lat_start>79.713</lat_start>
+      <lon_start>34.393</lon_start>
+      <frequency freq="38000" transceiver="1">
+        <num_pel_ch>1</num_pel_ch>
+        <ch_type type="P">
+          <sa_by_acocat acocat="8">
+            <sa ch="1">6.0</sa>
+          </sa_by_acocat>
+          <sa_by_acocat acocat="100">
+            <sa ch="1">50.0</sa>
+          </sa_by_acocat>
+        </ch_type>
+      </frequency>
+    </distance>
+  </distance_list>
+</echosounder_dataset>
