@@ -52,6 +52,7 @@
 	console.log(fileArray[0]);
   	var xmlhttp = new XMLHttpRequest();
   	xmlhttp.onreadystatechange = function() {
+	 console.log("ENTRO AL IF");
    	 if (this.readyState == 4 && this.status == 200) {
    	   myFunction(this);
   	  }
