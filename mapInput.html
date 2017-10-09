@@ -33,6 +33,8 @@
 	
    <script>
 	   
+     var map;
+	   
      function initMap(){
         var options = {
             zoom:6,
@@ -41,7 +43,7 @@
          
         var infowindow = new google.maps.InfoWindow();
       
-        var map = new google.maps.Map(document.getElementById('map'), options);
+        map = new google.maps.Map(document.getElementById('map'), options);
         
         
         google.maps.event.addListenerOnce(map, 'idle', function(){
