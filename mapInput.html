@@ -106,14 +106,16 @@
             center:{lat:62.641066,lng:-12.704159}
         }  
          
-      var infowindow = new google.maps.InfoWindow();
+        var infowindow = new google.maps.InfoWindow();
       
-      var map = new google.maps.Map(document.getElementById('map'), options);
+        var map = new google.maps.Map(document.getElementById('map'), options);
         
         
-      google.maps.event.addListenerOnce(map, 'idle', function(){
-      jQuery('.gm-style-iw').prev('div').remove();
-      }); 
+        google.maps.event.addListenerOnce(map, 'idle', function(){
+        jQuery('.gm-style-iw').prev('div').remove();
+        }); 
+		
+	}
         
       function addMarker(stock,latLng){
         var marker = new google.maps.Marker({
