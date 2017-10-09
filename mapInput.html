@@ -51,6 +51,8 @@
 	console.log("LOAD XML DOC FUNCTION");
 	console.log(fileArray[0]);
   	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", fileArray[0], true);
+	xmlhttp.send();
   	xmlhttp.onreadystatechange = function() {
 	 console.log("ReadyState: " + this.readyState);
 	 console.log("Status: " + this.status);
@@ -58,8 +60,6 @@
    	   myFunction(this);
   	  }
  	 }; 
-	  xmlhttp.open("GET", fileArray[0], true);
-	  xmlhttp.send();
 	}
 	   
 	function myFunction(xml) {
