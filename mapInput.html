@@ -42,7 +42,7 @@
                   '</li>');
 	        }
         document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-	};
+	     
 	  
 	function loadXMLDoc() {
   	var xmlhttp = new XMLHttpRequest();
@@ -67,8 +67,13 @@
   	}
   	document.getElementById("map").innerHTML = txt;
 	}
+	     
+	  
 
      document.getElementById('files').addEventListener('change', handleFileSelect, false);
+	     
+	     
+	     };
    </script>
    
 	
