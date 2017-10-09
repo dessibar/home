@@ -51,7 +51,7 @@
 	console.log("LOAD XML DOC FUNCTION");
 	console.log(fileArray[0]);
   	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("GET", fileArray[0], true);
+	xmlhttp.open("GET", "https://raw.githubusercontent.com/dessibar/home/master/acoustics/example.xml", true);
 	xmlhttp.send();
   	xmlhttp.onreadystatechange = function() {
 	 console.log("ReadyState: " + this.readyState);
