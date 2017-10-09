@@ -44,7 +44,6 @@
                   '</li>');
 	        }
         document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-	document.getElementById('files').addEventListener('change', handleFileSelect, false);
 	loadXMLDoc(files);
 									   
 	}
@@ -83,6 +82,7 @@
 	
 	}
 	     
+	document.getElementById('files').addEventListener('change', handleFileSelect, false);
 	     
    </script>
    
