@@ -42,21 +42,21 @@
                   '</li>');
 	        }
         document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-	loadXMLDoc();
+	loadXMLDoc(files);
 	
 	
 	}
 	   
-	function loadXMLDoc() {
+	function loadXMLDoc(fileArray) {
   	var xmlhttp = new XMLHttpRequest();
   	xmlhttp.onreadystatechange = function() {
    	 if (this.readyState == 4 && this.status == 200) {
    	   myFunction(this);
   	  }
- 	 
-	  xmlhttp.open("GET", files[0], true);
+ 	 }; 
+	  xmlhttp.open("GET", fileArray[0], true);
 	  xmlhttp.send();
-	};
+	}
 	   
 	function myFunction(xml) {
 	console.log("ENTRO A LA FUNCION");
