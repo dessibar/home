@@ -53,11 +53,10 @@
    	 if (this.readyState == 4 && this.status == 200) {
    	   myFunction(this);
   	  }
- 	 };
+ 	 
 	  xmlhttp.open("GET", files[0], true);
 	  xmlhttp.send();
-		
-	}
+	};
 	   
 	function myFunction(xml) {
 	console.log("ENTRO A LA FUNCION");
