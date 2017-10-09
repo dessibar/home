@@ -52,7 +52,7 @@
 	console.log(fileArray[0]);
   	var xmlhttp = new XMLHttpRequest();
   	xmlhttp.onreadystatechange = function() {
-	 console.log("ReadyState: " + this.ReadyState);
+	 console.log("ReadyState: " + this.readyState);
 	 console.log("Status: " + this.status);
    	 if (this.readyState == 4 && this.status == 200) {
    	   myFunction(this);
