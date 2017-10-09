@@ -23,6 +23,8 @@
   
 
    <h1>Icelandic and Barents Sea Stock Visualization Tool</h1>
+	 
+   <p id="acousticText></p>
    
    <input type="file" id="files" name="files[]" multiple />
    <output id="list"></output>
@@ -51,7 +53,7 @@
 	console.log("LOAD XML DOC FUNCTION");
 	console.log(fileArray[0]);
   	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("GET", "https://raw.githubusercontent.com/dessibar/home/master/acoustics/example.xml", true);
+	xmlhttp.open("GET", "/acoustics/example.xml", true);
 	xmlhttp.send();
   	xmlhttp.onreadystatechange = function() {
 	 console.log("ReadyState: " + this.readyState);
@@ -77,7 +79,7 @@
 	  console.log(y[i].childNodes[0].nodeValue + "<br>");
   	}
 
-  	document.getElementById("map").innerHTML = txt;
+  	document.getElementById("acousticText").innerHTML = txt;
 	
 	}
 	  
