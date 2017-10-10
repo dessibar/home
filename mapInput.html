@@ -80,7 +80,7 @@
    	  saData = distanceArray[i].getElementsByTagName("sa");
 	
 	  for (j = 0; j < saData.length; j++) {
-	    if (saData[j].childNodes[0].parentNode.getAttribute("acocat") = "16") {
+	    if (saData[j].childNodes[0].parentNode.getAttribute("acocat") == "16") {
 		console.log("EUREKA!!!");    
 		stocknumber = saData[j].childNodes[0].nodeValue;
 	    }
