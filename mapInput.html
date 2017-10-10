@@ -33,8 +33,6 @@
 	
    <script>
 	   
-     var map;
-	   
      function initMap(){
         var options = {
             zoom:6,
@@ -107,7 +105,7 @@
           var marker = new google.maps.Marker({
           position:latLng,
           icon:'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
-          setMap:map,
+          map:map,
           });
 		
 	  console.log("MARKER ADDED! Index: " + i);
