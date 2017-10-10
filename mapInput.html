@@ -25,10 +25,7 @@
    <h1>Icelandic and Barents Sea Stock Visualization Tool</h1>
 	 
    <p id="acousticText"></p>
-   
-   <input type="file" id="files" name="files[]" multiple />
-   <output id="list"></output>
-	
+   <button onclick="loadXMLDoc()">Generate Map</button>
    <div id="map"></div>
 	
    <script>
@@ -48,24 +45,8 @@
 		
      }	   
 	   
-     function handleFileSelect(evt) {
-        var files = evt.target.files; // FileList object
-        // files is a FileList of File objects. List some properties.
-        var output = [];
-        for (var i = 0, f; f = files[i]; i++) {
-        output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                  f.size, ' bytes, last modified: ',
-                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-                  '</li>');
-	        }
-        document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-	loadXMLDoc(files);
-									   
-	}
-	   
-	function loadXMLDoc(fileArray) {
+	function loadXMLDoc() {
 	console.log("LOAD XML DOC FUNCTION");
-	console.log(fileArray[0]);
   	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("GET", "/home/acoustics/example.xml", true);
 	xmlhttp.send();
