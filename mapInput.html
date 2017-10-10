@@ -72,23 +72,24 @@
 	this.parentNode.getAttribute("acocat")
 	*/
 
-  	for (i = 0; i < x.length; i++) {
-  	  latData = x[i].getElementsByTagName("lat_start");
+  	for (i = 0; i < distanceArray.length; i++) {
+  	  latData = distanceArray[i].getElementsByTagName("lat_start");
 	  console.log(latData[0].childNodes[0].nodeValue);
-	  lonData = x[i].getElementsByTagName("lon_start");
+	  lonData = distanceArray[i].getElementsByTagName("lon_start");
 	  console.log(lonData[0].childNodes[0].nodeValue);
-   	  saData = x[i].getElementsByTagName("sa");
+   	  saData = distanceArray[i].getElementsByTagName("sa");
 	
 	  for (j = 0; j < saData.length; j++) {
 	    if (saData[j].childNodes[0].parentNode.getAttribute("acocat") = "16") {
 		console.log("EUREKA!!!");    
+		stocknumber = saData[j].childNodes[0].nodeValue;
 	    }
 	    console.log(saData[j].childNodes[0].parentNode.nodeName);	  
 	  }
 		
 	  
 		
-	  stocknumber = z[i].childNodes[0].nodeValue;
+	  
 		
 	  latLng = {
            lat: Number(latData[0].childNodes[0].nodeValue),
