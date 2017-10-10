@@ -66,27 +66,26 @@
 	console.log(xml.responseXML);
   	txt = "";
 	
-  	x = xmlDoc.getElementsByTagName("lat_start");
-	y = xmlDoc.getElementsByTagName("lon_start");
-	z = xmlDoc.getElementsByTagName("ch_type");
+  	x = xmlDoc.getElementsByTagName("distance");
+	y = x.getElementsByTagName("lat_start");
+	z = x.getElementsByTagName("lon_start");
+
+	console.log("DATA OBTAINED....");
 		
-	a = z[0].ChildNodes
+	console.log(x[i].childNodes[0].nodeValue + "<br>");
+	console.log(y[i].childNodes[0].nodeValue + "<br>");
+	console.log(z[i].childNodes[0].nodeValue + "<br>");
+
 		
-	for (j = 0; j < a.length; j++) {
-	   console.log("CHILD NUMBER... " + j);	
-	}
-	
+	/*
+	this.parentNode.getAttribute("acocat")
+	*/
+
 		
   	for (i = 0; i< x.length; i++) {
   	  txt += x[i].childNodes[0].nodeValue + "<br>";
 	  txt += y[i].childNodes[0].nodeValue + "<br>";
           txt += z[i].childNodes[0].nodeValue + "<br>";
-							   
-          console.log(x[i].childNodes[0].nodeValue + "<br>");
-	  console.log(y[i].childNodes[0].nodeValue + "<br>");
-	  console.log(z[i].childNodes[0].nodeValue + "<br>");
-	  console.log(z[i].childNodes[1].nodeValue + "<br>");
-	  console.log(z[i].childNodes[2].nodeValue + "<br>");
 		
 	  stocknumber = z[i].childNodes[0].nodeValue;
 		
