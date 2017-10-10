@@ -121,17 +121,18 @@
           '<div id="stockContent"><p>Capelin Stock: ' + stock + '</p></div>' 
           '</div>'+
           '</div>';                     
-        
-          google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
-             return function() {
-             infowindow.setContent(content);
-             infowindow.open(map,this);
-             };  
+       
 	    
 	}
   	   
 							 
    /*
+   
+        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+             return function() {
+             infowindow.setContent(content);
+             infowindow.open(map,this);
+             };  
    
    	  
   	  $infoWindowContent.width($infoWindowContent.width());
