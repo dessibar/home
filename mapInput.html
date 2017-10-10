@@ -61,36 +61,36 @@
 	   
 	function myFunction(xml) {
 	console.log("ENTRO A LA FUNCION");
-  	var stockNumber, latLng, a, x, y, z, i, xmlDoc, txt;
+  	var stockNumber, latLng, distanceArray, latData, lonData, saData, i, j, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
 	console.log(xml.responseXML);
   	txt = "";
 	
-  	x = xmlDoc.getElementsByTagName("distance");
-	y = x[0].getElementsByTagName("lat_start");
-	z = x[0].getElementsByTagName("lon_start");
-
-	console.log("DATA OBTAINED....");
-		
-	console.log(y[0].childNodes[0].nodeValue + "<br>");
-	console.log(z[0].childNodes[0].nodeValue + "<br>");
-
+  	distanceArray = xmlDoc.getElementsByTagName("distance");
 		
 	/*
 	this.parentNode.getAttribute("acocat")
 	*/
 
+  	for (i = 0; i < x.length; i++) {
+  	  latData = x[i].getElementsByTagName("lat_start");
+	  lonData = x[i].getElementsByTagName("lon_start");
+   	  saData = x[i].getElementsByTagName("sa");
+	
+	  for (j = 0; j < saData.length; j++) {
+	    if (saData[j].childNodes[0].parentNode.getAttribute("acocat") = "16") {
+		console.log("EUREKA!!!");    
+	    }
+	    console.log(saData[j].childNodes[0].parentNode.nodeName);	  
+	  }
 		
-  	for (i = 0; i< x.length; i++) {
-  	  txt += x[i].childNodes[0].nodeValue + "<br>";
-	  txt += y[i].childNodes[0].nodeValue + "<br>";
-          txt += z[i].childNodes[0].nodeValue + "<br>";
+	  
 		
 	  stocknumber = z[i].childNodes[0].nodeValue;
 		
 	  latLng = {
-           lat: Number(x[i].childNodes[0].nodeValue),
-           lng: Number(y[i].childNodes[0].nodeValue)
+           lat: Number(latData[0].childNodes[0].nodeValue),
+           lng: Number(lonData[0].childNodes[0].nodeValue)
           };
 		
 	  var capelinImage = {
