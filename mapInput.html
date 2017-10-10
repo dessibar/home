@@ -108,43 +108,41 @@
      }
 
 	   
-	function addMarker(stock,image,latLng){
-          var marker = new google.maps.Marker({
-            position:latLng,
-            icon:image,
-            map:map
-          });	
-		
-	  var content = '<div id="content">'+
-          '<div id="bodyContent">'+
-          '<div id="positionContent"><p>Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</p></div>' +
-          '<div id="stockContent"><p>Capelin Stock: ' + stock + '</p></div>' 
-          '</div>'+
-          '</div>';                     
-       
-		
-	  google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
-             return function() {
-             infowindow.setContent(content);
-             infowindow.open(map,this);
-             };  
-   
-   	  
-  	  $infoWindowContent.width($infoWindowContent.width());
+      google.maps.event.addListenerOnce(map, 'idle', function(){
+      jQuery('.gm-style-iw').prev('div').remove();
+      }); 
+        
+      function addMarker(image,stock,latLng){
+        var marker = new google.maps.Marker({
+          position:latLng,
+          icon:image,
+          map:map,
+        });
+        
+        var content = '<div id="content">'+
+      '<div id="bodyContent">'+
+      '<div id="positionContent"><p>Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</p></div>' +
+      '<div id="stockContent"><p>Capelin Stock: ' + stock + '</p></div>' 
+      '</div>'+
+      '</div>';                     
+        
+        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+        return function() {
+          infowindow.setContent(content);
+          infowindow.open(map,this);
+          };
+        $infoWindowContent.width($infoWindowContent.width());
         })(marker,content,infowindow));
-	
-	
-   
-           google.maps.event.addListener(marker, 'click', function() {
-              infowindow.open(map,marker);
-           });
-           // Event that closes the Info Window with a click on the map
-              google.maps.event.addListener(map, 'click', function() {
-              infowindow.close();
-              });  
-     	   }
-	    
-	}
+       
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+
+        // Event that closes the Info Window with a click on the map
+        google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
+        });
+  }    
   	   
 							 
    /*
