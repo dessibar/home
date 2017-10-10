@@ -74,7 +74,9 @@
 
   	for (i = 0; i < x.length; i++) {
   	  latData = x[i].getElementsByTagName("lat_start");
+	  console.log(latData[0].childNodes[0].nodeValue);
 	  lonData = x[i].getElementsByTagName("lon_start");
+	  console.log(lonData[0].childNodes[0].nodeValue);
    	  saData = x[i].getElementsByTagName("sa");
 	
 	  for (j = 0; j < saData.length; j++) {
