@@ -30,8 +30,6 @@
 	
    <script> 
 	   
-	var infoWindow;
-	   
 	function loadXMLDoc() {
 	console.log("LOAD XML DOC FUNCTION");
   	var xmlhttp = new XMLHttpRequest();
@@ -101,7 +99,7 @@
             center:{lat:62.641066,lng:-12.704159}
         }  
          
- 	infoWindow = new google.maps.InfoWindow();
+ 	var infowindow = new google.maps.InfoWindow();
         map = new google.maps.Map(document.getElementById('map'), options);
 	   
       google.maps.event.addListenerOnce(map, 'idle', function(){
@@ -126,7 +124,6 @@
         
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
         return function() {
-	  var infoWindow = new google.maps.InfoWindow();
           infowindow.setContent(content);
           infowindow.open(map,this);
           };
