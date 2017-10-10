@@ -80,11 +80,12 @@
    	  saData = distanceArray[i].getElementsByTagName("sa");
 	
 	  for (j = 0; j < saData.length; j++) {
+	    console.log("saData.length = " + saData.length);
 	    if (saData[j].childNodes[0].parentNode.getAttribute("acocat") == "16") {
 		console.log("EUREKA!!!");    
 		stocknumber = saData[j].childNodes[0].nodeValue;
 	    }
-	    console.log(saData[j].childNodes[0].parentNode.parentNode.nodeName);	  
+	    console.log(saData[j].parentNode.nodeName);	  
 	  }
 		
 	  
