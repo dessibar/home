@@ -61,22 +61,14 @@
 	   
 	function myFunction(xml) {
 	console.log("ENTRO A LA FUNCION");
-  	var stockNumber, latLng, a, x, y, z, i, xmlDoc, txt;
+  	var stockNumber, latLng, x, y, z, i, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
 	console.log(xml.responseXML);
   	txt = "";
 	
-	x = xmlDoc.getElementsByTagName("distance");
-	a = x.getElementsBy("lat_start");
-	
-	console.log("LAT START 0: " + a[0].childNodes[0].nodeValue);
-	console.log("LAT START 1: " + a[1].childNodes[0].nodeValue);
-		    
-		/*
   	x = xmlDoc.getElementsByTagName("lat_start");
 	y = xmlDoc.getElementsByTagName("lon_start");
-	z = xmlDoc.getElementsByTagName("sa");
-	*/
+	z = xmlDoc.getElementsByTagName("ch_type");
 		
   	for (i = 0; i< x.length; i++) {
   	  txt += x[i].childNodes[0].nodeValue + "<br>";
@@ -86,6 +78,8 @@
           console.log(x[i].childNodes[0].nodeValue + "<br>");
 	  console.log(y[i].childNodes[0].nodeValue + "<br>");
 	  console.log(z[i].childNodes[0].nodeValue + "<br>");
+	  console.log(z[i].childNodes[1].nodeValue + "<br>");
+	  console.log(z[i].childNodes[2].nodeValue + "<br>");
 		
 	  stocknumber = z[i].childNodes[0].nodeValue;
 		
