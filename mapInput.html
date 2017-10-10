@@ -102,25 +102,34 @@
            lng: Number(y[i].childNodes[0].nodeValue)
           };
 		
-          var marker = new google.maps.Marker({
-          position:latLng,
-          icon:'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
-          map:map,
-          });
-		
+	  var capelinImage = {
+            url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
+            scaledSize: new google.maps.Size(30, 30)
+          }
+	  
+          addMarker(stocknumber,capelinImage,latLng);
 	  console.log("MARKER ADDED! Index: " + i);
 		
 	}
 		
 	document.getElementById("acousticText").innerHTML = txt;
 	
-   }
+     }
 	     
-document.getElementById('files').addEventListener('change', handleFileSelect, false);
+     document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
-						     
+	   
+	function addMarker(stock,image,latLng){
+          var marker = new google.maps.Marker({
+            position:latLng,
+            icon:image,
+            map:map
+          });	
+		
+	}
 	 
 	/*	
+	
 	
 	  
         
