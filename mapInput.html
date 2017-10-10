@@ -41,10 +41,8 @@
             center:{lat:62.641066,lng:-12.704159}
         }  
          
-        var infowindow = new google.maps.InfoWindow();
-      
+        var infowindow = new google.maps.InfoWindow(); 
         map = new google.maps.Map(document.getElementById('map'), options);
-        
         
         google.maps.event.addListenerOnce(map, 'idle', function(){
         jQuery('.gm-style-iw').prev('div').remove();
@@ -126,7 +124,6 @@
              infowindow.setContent(content);
              infowindow.open(map,this);
              };  
-	  }
 						       
         /*	
 		
@@ -143,6 +140,8 @@
               infowindow.close();
               });  
      	   }
+      
+	 } 
 
   	 document.getElementById("acousticText").innerHTML = txt;
 	
