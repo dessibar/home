@@ -81,7 +81,7 @@
 	
 	  for (j = 0; j < saData.length; j++) {
 	    console.log("saData.length = " + saData.length);
-	    if (saData[j].childNodes[0].parentNode.getAttribute("acocat") == "16") {
+	    if (saData[j].parentNode.getAttribute("acocat") == "16") {
 		console.log("EUREKA!!!");    
 		stocknumber = saData[j].childNodes[0].nodeValue;
 	    }
