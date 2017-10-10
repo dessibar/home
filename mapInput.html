@@ -30,8 +30,6 @@
 	
    <script> 
 	   
-	var infoWindow = new google.maps.InfoWindow();
-	   
 	function loadXMLDoc() {
 	console.log("LOAD XML DOC FUNCTION");
   	var xmlhttp = new XMLHttpRequest();
@@ -115,6 +113,8 @@
           icon:image,
           map:map,
         });
+	      
+	var infoWindow = new google.maps.InfoWindow();
         
         var content = '<div id="content">'+
       '<div id="bodyContent">'+
