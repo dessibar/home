@@ -98,7 +98,7 @@
         }  
          
 	var infowindow = new google.maps.InfoWindow();
-        map = new google.maps.Map(document.getElementById('map'), options);
+        var map = new google.maps.Map(document.getElementById('map'), options);
 	   
       google.maps.event.addListenerOnce(map, 'idle', function(){
       jQuery('.gm-style-iw').prev('div').remove();
