@@ -122,10 +122,11 @@
           '</div>';                     
         
           google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
-          return function() {
-          infowindow.setContent(content);
-          infowindow.open(map,this);
-          };
+             return function() {
+             infowindow.setContent(content);
+             infowindow.open(map,this);
+             };  
+	  }
 						       
         /*	
 		
@@ -134,15 +135,14 @@
 	
 	*/
    
-         google.maps.event.addListener(marker, 'click', function() {
-           infowindow.open(map,marker);
-         });
-         // Event that closes the Info Window with a click on the map
-         google.maps.event.addListener(map, 'click', function() {
-         infowindow.close();
-         });
-		  
-   	 }
+           google.maps.event.addListener(marker, 'click', function() {
+              infowindow.open(map,marker);
+           });
+           // Event that closes the Info Window with a click on the map
+              google.maps.event.addListener(map, 'click', function() {
+              infowindow.close();
+              });  
+     	   }
 
   	 document.getElementById("acousticText").innerHTML = txt;
 	
