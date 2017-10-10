@@ -69,10 +69,13 @@
   	x = xmlDoc.getElementsByTagName("lat_start");
 	y = xmlDoc.getElementsByTagName("lon_start");
 	z = xmlDoc.getElementsByTagName("ch_type");
-	
-	for (j = 0; z[0].childNodes.length; j++) {
-	   console.log("ChildNode " + j + ": " + z[0].childNodes[j].nodeValue);
+		
+	a = z[0].ChildNodes
+		
+	for (j = 0; j < a.length; j++) {
+	   console.log("CHILD NUMBER... " + j);	
 	}
+	
 		
   	for (i = 0; i< x.length; i++) {
   	  txt += x[i].childNodes[0].nodeValue + "<br>";
