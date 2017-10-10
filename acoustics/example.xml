@@ -14,6 +14,9 @@
           <sa_by_acocat acocat="8">
             <sa ch="1">19.0</sa>
           </sa_by_acocat>
+          <sa_by_acocat acocat="16">
+            <sa ch="1">27.0</sa>
+          </sa_by_acocat>
           <sa_by_acocat acocat="100">
             <sa ch="1">76.0</sa>
           </sa_by_acocat>
@@ -30,6 +33,9 @@
         <ch_type type="P">
           <sa_by_acocat acocat="8">
             <sa ch="1">4777.0</sa>
+          </sa_by_acocat>
+          <sa_by_acocat acocat="16">
+            <sa ch="1">194.0</sa>
           </sa_by_acocat>
           <sa_by_acocat acocat="100">
             <sa ch="1">4844.0</sa>
