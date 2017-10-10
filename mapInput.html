@@ -27,8 +27,6 @@
    <div id="map"></div>
 	
    <script> 
-	
-	var infowindow;
 	   
 	function loadXMLDoc() {
 	console.log("LOAD XML DOC FUNCTION");
@@ -99,7 +97,7 @@
             center:{lat:62.641066,lng:-12.704159}
         }  
          
-	infowindow = new google.maps.InfoWindow();
+	var infowindow = new google.maps.InfoWindow();
         map = new google.maps.Map(document.getElementById('map'), options);
 	   
       google.maps.event.addListenerOnce(map, 'idle', function(){
