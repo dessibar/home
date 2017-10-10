@@ -28,6 +28,9 @@
 	
    <script> 
 	   
+	var map;
+	var infoWindow;
+	   
 	function loadXMLDoc() {
 	console.log("LOAD XML DOC FUNCTION");
   	var xmlhttp = new XMLHttpRequest();
@@ -97,8 +100,8 @@
             center:{lat:62.641066,lng:-12.704159}
         }  
          
-	var infowindow = new google.maps.InfoWindow();
-        var map = new google.maps.Map(document.getElementById('map'), options);
+	infowindow = new google.maps.InfoWindow();
+        map = new google.maps.Map(document.getElementById('map'), options);
 	   
       google.maps.event.addListenerOnce(map, 'idle', function(){
       jQuery('.gm-style-iw').prev('div').remove();
@@ -120,21 +123,21 @@
       '</div>'+
       '</div>';                     
         
-        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+        google.maps.event.addListener(marker,'click', (function(marker,content,infoWindow){ 
         return function() {
-          infowindow.setContent(content);
-          infowindow.open(map,this);
+          infoWindow.setContent(content);
+          infoWindow.open(map,this);
           };
         $infoWindowContent.width($infoWindowContent.width());
-        })(marker,content,infowindow));
+        })(marker,content,infoWindow));
        
         google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
+          infoWindow.open(map,marker);
         });
 
         // Event that closes the Info Window with a click on the map
         google.maps.event.addListener(map, 'click', function() {
-        infowindow.close();
+        infoWindow.close();
         });
   }    
 	     
