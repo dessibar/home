@@ -67,8 +67,8 @@
   	txt = "";
 	
   	x = xmlDoc.getElementsByTagName("distance");
-	y = x.getElementsByTagName("lat_start");
-	z = x.getElementsByTagName("lon_start");
+	y = x[0].getElementsByTagName("lat_start");
+	z = x[0].getElementsByTagName("lon_start");
 
 	console.log("DATA OBTAINED....");
 		
