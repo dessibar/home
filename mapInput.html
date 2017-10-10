@@ -113,8 +113,6 @@
           icon:image,
           map:map,
         });
-	      
-	var infoWindow = new google.maps.InfoWindow();
         
         var content = '<div id="content">'+
       '<div id="bodyContent">'+
@@ -125,6 +123,7 @@
         
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
         return function() {
+	  var infoWindow = new google.maps.InfoWindow();
           infowindow.setContent(content);
           infowindow.open(map,this);
           };
