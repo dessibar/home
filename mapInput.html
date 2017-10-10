@@ -85,26 +85,21 @@
 		console.log("EUREKA!!!");    
 		stocknumber = saData[j].childNodes[0].nodeValue;
 		console.log("Stock Number: " + saData[j].childNodes[0].nodeValue);
+		    
+		latLng = {
+                   lat: Number(latData[0].childNodes[0].nodeValue),
+                   lng: Number(lonData[0].childNodes[0].nodeValue)
+                };
+		    
+		var capelinImage = {
+                   url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
+                   scaledSize: new google.maps.Size(30, 30)
+                }
+		
+	        addMarker(stocknumber,capelinImage,latLng);
+	        console.log("MARKER ADDED! Index: " + i);
 	    }
-	    console.log(saData[j].parentNode.nodeName);	  
-	  }
-		
-	  
-		
-	  
-		
-	  latLng = {
-           lat: Number(latData[0].childNodes[0].nodeValue),
-           lng: Number(lonData[0].childNodes[0].nodeValue)
-          };
-		
-	  var capelinImage = {
-            url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
-            scaledSize: new google.maps.Size(30, 30)
-          }
-	  
-          addMarker(stocknumber,capelinImage,latLng);
-	  console.log("MARKER ADDED! Index: " + i);
+	  }          
 		
 	}
 		
@@ -120,14 +115,7 @@
             map:map
           });	
 		
-	}
-	 
-	/*	
-	
-	
-	  
-        
-          var content = '<div id="content">'+
+	  var content = '<div id="content">'+
           '<div id="bodyContent">'+
           '<div id="positionContent"><p>Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</p></div>' +
           '<div id="stockContent"><p>Capelin Stock: ' + stock + '</p></div>' 
@@ -139,10 +127,9 @@
              infowindow.setContent(content);
              infowindow.open(map,this);
              };  
-						       
-        	
 		
-        $infoWindowContent.width($infoWindowContent.width());
+		  
+  	  $infoWindowContent.width($infoWindowContent.width());
         })(marker,content,infowindow));
 	
 	
@@ -155,14 +142,9 @@
               infowindow.close();
               });  
      	   }
-      
-      
-      */
-	  
-
-  	 
+	    
+	}
   	   
-	   
    </script>
 
 
