@@ -57,7 +57,7 @@
 	function myFunction(xml) {
   	var stockNumber, latLng, distanceArray, latData, lonData, saData, i, j, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
-	console.log(xml.responseXML);
+	deleteMarkers();
   	txt = "";
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
