@@ -29,6 +29,7 @@
 	
    <script> 
 	   
+	var markers = [];
 	var map;
 	var infoWindow;
 	var maxLat = 0;
@@ -178,10 +179,29 @@
         google.maps.event.addListener(map, 'click', function() {
         infoWindow.close();
         });
-	
-	
+	      
+	markers.push(marker);
 	
   	}    
+	   
+	function setMapOnAll(map) {
+          for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+          }
+        }
+	   
+	function clearMarkers() {
+          setMapOnAll(null);
+        }
+	   
+	function showMarkers() {
+          setMapOnAll(map);
+        }
+	   
+	function deleteMarkers() {
+          clearMarkers();
+          markers = [];
+        }
 	   
 	function moveToLocation(lat, lng){
         var center = new google.maps.LatLng(lat, lng);
