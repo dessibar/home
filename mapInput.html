@@ -152,7 +152,7 @@
 	      
         var content = '<div id="content">'+
       '<div id="bodyContent">'+
-      '<div id="dateContent"><p>Date: ' + date + '</p></div>' +
+      '<div id="dateContent"><p>Date: ' + date.substring(2,date.length-1) + '</p></div>' +
       '<div id="positionContent"><p>Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</p></div>' +
       '<div id="stockContent"><p>Capelin Stock: ' + stock + '</p></div>' 
       '</div>'+
