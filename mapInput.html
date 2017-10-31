@@ -97,17 +97,9 @@
 		else if (Number(latData[0].childNodes[0].nodeValue) < minLat) {
 		   minLat = Number(latData[0].childNodes[0].nodeValue);
 		}
-		
-		if (Number(lonData[0].childNodes[0].nodeValue) > 0)
-		   if (Number(lonData[0].childNodes[0].nodeValue) > maxLong) {
-		      maxLong = Number(lonData[0].childNodes[0].nodeValue);
-		   }
-		else
-		   if (Number(lonData[0].childNodes[0].nodeValue) < maxLong) {
-		      maxLong = Number(lonData[0].childNodes[0].nodeValue);
-		   }
-	    	}
-		    
+		if (Number(lonData[0].childNodes[0].nodeValue) > maxLong) {
+		   maxLong = Number(lonData[0].childNodes[0].nodeValue);
+		}
 		if (Number(lonData[0].childNodes[0].nodeValue) < minLong) {
 		   minLong = Number(lonData[0].childNodes[0].nodeValue);
 		}
