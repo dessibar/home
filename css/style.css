@@ -444,3 +444,11 @@ ul img {
     color:blue;
     font-weight: bold;
 }
+
+#dateContent{
+    font-family: "Verdana", Verdana, sans-serif;
+    font-size: 125%;
+    text-align:center;
+    color:green;
+    font-weight: bold;
+}
