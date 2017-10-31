@@ -63,7 +63,9 @@
         minLat = 999999;
 	minLong = 999999;
   	txt = "";
-		
+	
+  	distanceArray = xmlDoc.getElementsByTagName("distance");
+
 	console.log("Primer Long: " + distanceArray[0].getElementsByTagName("lon_start")[0].childNodes[0].nodeValue)
 	if (distanceArray[0].getElementsByTagName("lon_start")[0].childNodes[0].nodeValue > 0) {
 	   maxLong = 0;
@@ -71,9 +73,7 @@
 	else {
 	   maxLong = -999999;
 	}
-	
-  	distanceArray = xmlDoc.getElementsByTagName("distance");
-
+		
   	for (i = 0; i < distanceArray.length; i++) {
 	  stockDate = distanceArray[i].getAttribute("start_time");
   	  latData = distanceArray[i].getElementsByTagName("lat_start");
