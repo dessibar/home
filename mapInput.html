@@ -63,6 +63,14 @@
         minLat = 999999;
 	minLong = 999999;
   	txt = "";
+		
+	console.log("Primer Long: " + distanceArray[0].getElementsByTagName("lon_start")[0].childNodes[0].nodeValue)
+	if (distanceArray[0].getElementsByTagName("lon_start")[0].childNodes[0].nodeValue > 0) {
+	   maxLong = 0;
+	}
+	else {
+	   maxLong = -999999;
+	}
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
 
@@ -90,10 +98,17 @@
 		   minLat = Number(latData[0].childNodes[0].nodeValue);
 		}
 		
-		if (Number(lonData[0].childNodes[0].nodeValue) > maxLong) {
-		   maxLong = Number(lonData[0].childNodes[0].nodeValue);
-		}
-		else if (Number(lonData[0].childNodes[0].nodeValue) < minLong) {
+		if (Number(lonData[0].childNodes[0].nodeValue) > 0)
+		   if (Number(lonData[0].childNodes[0].nodeValue) > maxLong) {
+		      maxLong = Number(lonData[0].childNodes[0].nodeValue);
+		   }
+		else
+		   if (Number(lonData[0].childNodes[0].nodeValue) < maxLong) {
+		      maxLong = Number(lonData[0].childNodes[0].nodeValue);
+		   }
+	    	}
+		    
+		if (Number(lonData[0].childNodes[0].nodeValue) < minLong) {
 		   minLong = Number(lonData[0].childNodes[0].nodeValue);
 		}
 		    
