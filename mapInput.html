@@ -32,10 +32,10 @@
 	var markers = [];
 	var map;
 	var infoWindow;
-	var maxLat = 0;
-	var maxLong = 0;
-        var minLat = 999999;
-	var minLong = 999999;
+	var maxLat;
+	var maxLong;
+        var minLat;
+	var minLong;
 	   
 	function loadXMLDoc(location) {
 	console.log("LOAD XML DOC FUNCTION");
@@ -58,6 +58,10 @@
   	var stockNumber, latLng, distanceArray, latData, lonData, saData, i, j, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
 	deleteMarkers();
+	maxLat = 0;
+	maxLong = 0;
+        minLat = 999999;
+	minLong = 999999;
   	txt = "";
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
