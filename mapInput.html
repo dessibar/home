@@ -23,7 +23,8 @@
    <h1>Icelandic and Barents Sea Stock Visualization Tool</h1>
 	 
    <p id="acousticText"></p>
-   <button onclick="loadXMLDoc()">Generate Map</button>
+   <button onclick="loadXMLDoc("Svalbard")">Svalbard Sample</button>
+   <button onclick="loadXMLDoc("Iceland")">Icelandic Sample</button>
    <div id="map"></div>
 	
    <script> 
@@ -35,14 +36,17 @@
         var minLat = 999999;
 	var minLong = 999999;
 	   
-	function loadXMLDoc() {
+	function loadXMLDoc(location) {
 	console.log("LOAD XML DOC FUNCTION");
   	var xmlhttp = new XMLHttpRequest();
+	if (location == "Svalbard"){
 	xmlhttp.open("GET", "/home/acoustics/JH_LCS.txt.xml", true);
+	}
+	else if (location == "Iceland") {
+	xmlhttp.open("GET", "/home/acoustics/Icelandic.txt.xml", true);
+	}
 	xmlhttp.send();
   	xmlhttp.onreadystatechange = function() {
-	 console.log("ReadyState: " + this.readyState);
-	 console.log("Status: " + this.status);
    	 if (this.readyState == 4 && this.status == 200) {
    	   myFunction(this);
   	  }
