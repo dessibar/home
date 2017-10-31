@@ -41416,7 +41416,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>205.0</pel_ch_thickness>
       <lat_start>56.07</lat_start>
-      <lon_start>38.05</lon_start>
+      <lon_start>-38.05</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41430,7 +41430,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>205.0</pel_ch_thickness>
       <lat_start>56.068</lat_start>
-      <lon_start>38.11</lon_start>
+      <lon_start>-38.11</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41444,7 +41444,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>204.0</pel_ch_thickness>
       <lat_start>56.067</lat_start>
-      <lon_start>38.17</lon_start>
+      <lon_start>-38.17</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41458,7 +41458,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>207.0</pel_ch_thickness>
       <lat_start>56.063</lat_start>
-      <lon_start>38.23</lon_start>
+      <lon_start>-38.23</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41472,7 +41472,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>207.0</pel_ch_thickness>
       <lat_start>56.062</lat_start>
-      <lon_start>38.29</lon_start>
+      <lon_start>-38.29</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41486,7 +41486,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>108.0</pel_ch_thickness>
       <lat_start>56.06</lat_start>
-      <lon_start>38.352</lon_start>
+      <lon_start>-38.352</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41500,7 +41500,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>109.0</pel_ch_thickness>
       <lat_start>56.058</lat_start>
-      <lon_start>38.412</lon_start>
+      <lon_start>-38.412</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41514,7 +41514,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>215.0</pel_ch_thickness>
       <lat_start>56.057</lat_start>
-      <lon_start>38.472</lon_start>
+      <lon_start>-38.472</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41528,7 +41528,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>109.0</pel_ch_thickness>
       <lat_start>56.055</lat_start>
-      <lon_start>38.532</lon_start>
+      <lon_start>-38.532</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41542,7 +41542,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>215.0</pel_ch_thickness>
       <lat_start>56.055</lat_start>
-      <lon_start>38.59</lon_start>
+      <lon_start>-38.59</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41556,7 +41556,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>215.0</pel_ch_thickness>
       <lat_start>56.052</lat_start>
-      <lon_start>38.648</lon_start>
+      <lon_start>-38.648</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41570,7 +41570,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>218.0</pel_ch_thickness>
       <lat_start>56.047</lat_start>
-      <lon_start>38.707</lon_start>
+      <lon_start>-38.707</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41584,7 +41584,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>220.0</pel_ch_thickness>
       <lat_start>56.038</lat_start>
-      <lon_start>38.75</lon_start>
+      <lon_start>-38.75</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41598,7 +41598,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>218.0</pel_ch_thickness>
       <lat_start>56.032</lat_start>
-      <lon_start>38.762</lon_start>
+      <lon_start>-38.762</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41612,7 +41612,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>222.0</pel_ch_thickness>
       <lat_start>56.032</lat_start>
-      <lon_start>38.822</lon_start>
+      <lon_start>-38.822</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41626,7 +41626,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>224.0</pel_ch_thickness>
       <lat_start>56.03</lat_start>
-      <lon_start>38.882</lon_start>
+      <lon_start>-38.882</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41640,7 +41640,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>221.0</pel_ch_thickness>
       <lat_start>56.028</lat_start>
-      <lon_start>38.942</lon_start>
+      <lon_start>-38.942</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41654,7 +41654,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>224.0</pel_ch_thickness>
       <lat_start>56.027</lat_start>
-      <lon_start>39.002</lon_start>
+      <lon_start>-39.002</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41668,7 +41668,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>224.0</pel_ch_thickness>
       <lat_start>56.025</lat_start>
-      <lon_start>39.062</lon_start>
+      <lon_start>-39.062</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41682,7 +41682,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>224.0</pel_ch_thickness>
       <lat_start>56.023</lat_start>
-      <lon_start>39.123</lon_start>
+      <lon_start>-39.123</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41696,7 +41696,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>224.0</pel_ch_thickness>
       <lat_start>56.022</lat_start>
-      <lon_start>39.183</lon_start>
+      <lon_start>-39.183</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41710,7 +41710,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>225.0</pel_ch_thickness>
       <lat_start>56.02</lat_start>
-      <lon_start>39.243</lon_start>
+      <lon_start>-39.243</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41724,7 +41724,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>114.0</pel_ch_thickness>
       <lat_start>56.017</lat_start>
-      <lon_start>39.303</lon_start>
+      <lon_start>-39.303</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41738,7 +41738,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>224.0</pel_ch_thickness>
       <lat_start>56.015</lat_start>
-      <lon_start>39.363</lon_start>
+      <lon_start>-39.363</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41752,7 +41752,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>115.0</pel_ch_thickness>
       <lat_start>56.013</lat_start>
-      <lon_start>39.423</lon_start>
+      <lon_start>-39.423</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41766,7 +41766,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>227.0</pel_ch_thickness>
       <lat_start>56.012</lat_start>
-      <lon_start>39.483</lon_start>
+      <lon_start>-39.483</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41780,7 +41780,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>226.0</pel_ch_thickness>
       <lat_start>56.01</lat_start>
-      <lon_start>39.543</lon_start>
+      <lon_start>-39.543</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41794,7 +41794,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>223.0</pel_ch_thickness>
       <lat_start>56.008</lat_start>
-      <lon_start>39.603</lon_start>
+      <lon_start>-39.603</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41808,7 +41808,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>114.0</pel_ch_thickness>
       <lat_start>56.005</lat_start>
-      <lon_start>39.663</lon_start>
+      <lon_start>-39.663</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41822,7 +41822,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>223.0</pel_ch_thickness>
       <lat_start>56.003</lat_start>
-      <lon_start>39.723</lon_start>
+      <lon_start>-39.723</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41836,7 +41836,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>116.0</pel_ch_thickness>
       <lat_start>56.002</lat_start>
-      <lon_start>39.783</lon_start>
+      <lon_start>-39.783</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41850,7 +41850,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>222.0</pel_ch_thickness>
       <lat_start>55.998</lat_start>
-      <lon_start>39.843</lon_start>
+      <lon_start>-39.843</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41864,7 +41864,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>221.0</pel_ch_thickness>
       <lat_start>55.997</lat_start>
-      <lon_start>39.903</lon_start>
+      <lon_start>-39.903</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41878,7 +41878,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>224.0</pel_ch_thickness>
       <lat_start>55.995</lat_start>
-      <lon_start>39.963</lon_start>
+      <lon_start>-39.963</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41892,7 +41892,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>227.0</pel_ch_thickness>
       <lat_start>55.993</lat_start>
-      <lon_start>40.023</lon_start>
+      <lon_start>-40.023</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41906,7 +41906,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>228.0</pel_ch_thickness>
       <lat_start>55.992</lat_start>
-      <lon_start>40.083</lon_start>
+      <lon_start>-40.083</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41920,7 +41920,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>228.0</pel_ch_thickness>
       <lat_start>55.988</lat_start>
-      <lon_start>40.143</lon_start>
+      <lon_start>-40.143</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41934,7 +41934,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>230.0</pel_ch_thickness>
       <lat_start>55.987</lat_start>
-      <lon_start>40.203</lon_start>
+      <lon_start>-40.203</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41948,7 +41948,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>231.0</pel_ch_thickness>
       <lat_start>55.985</lat_start>
-      <lon_start>40.263</lon_start>
+      <lon_start>-40.263</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41962,7 +41962,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>118.0</pel_ch_thickness>
       <lat_start>55.983</lat_start>
-      <lon_start>40.323</lon_start>
+      <lon_start>-40.323</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41976,7 +41976,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>234.0</pel_ch_thickness>
       <lat_start>55.982</lat_start>
-      <lon_start>40.383</lon_start>
+      <lon_start>-40.383</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -41990,7 +41990,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>239.0</pel_ch_thickness>
       <lat_start>55.978</lat_start>
-      <lon_start>40.442</lon_start>
+      <lon_start>-40.442</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -42004,7 +42004,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>239.0</pel_ch_thickness>
       <lat_start>55.977</lat_start>
-      <lon_start>40.502</lon_start>
+      <lon_start>-40.502</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -42018,7 +42018,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>242.0</pel_ch_thickness>
       <lat_start>55.975</lat_start>
-      <lon_start>40.562</lon_start>
+      <lon_start>-40.562</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -42032,7 +42032,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>124.0</pel_ch_thickness>
       <lat_start>55.972</lat_start>
-      <lon_start>40.622</lon_start>
+      <lon_start>-40.622</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -42046,7 +42046,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>245.0</pel_ch_thickness>
       <lat_start>55.97</lat_start>
-      <lon_start>40.682</lon_start>
+      <lon_start>-40.682</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -42060,7 +42060,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>126.0</pel_ch_thickness>
       <lat_start>55.968</lat_start>
-      <lon_start>40.742</lon_start>
+      <lon_start>-40.742</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
@@ -42074,7 +42074,7 @@
       <integrator_dist>1.0</integrator_dist>
       <pel_ch_thickness>246.0</pel_ch_thickness>
       <lat_start>55.967</lat_start>
-      <lon_start>40.802</lon_start>
+      <lon_start>-40.802</lon_start>
       <frequency freq="38000" transceiver="1">
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
