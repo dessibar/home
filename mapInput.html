@@ -58,6 +58,7 @@
   	distanceArray = xmlDoc.getElementsByTagName("distance");
 
   	for (i = 0; i < distanceArray.length; i++) {
+	  stockDate = distanceArray[i].getAttribute("start_time");
   	  latData = distanceArray[i].getElementsByTagName("lat_start");
 	  console.log(latData[0].childNodes[0].nodeValue);
 	  lonData = distanceArray[i].getElementsByTagName("lon_start");
@@ -106,7 +107,7 @@
                    }
 		}
 		
-	        addMarker(capelinImage,stocknumber,latLng);
+	        addMarker(capelinImage,stocknumber,stockDate,latLng);
 	    }
 	  }          
 		
@@ -140,7 +141,7 @@
 
      }
         
-      function addMarker(image,stock,latLng){
+      function addMarker(image,stock,date,latLng){
         var marker = new google.maps.Marker({
           position:latLng,
           icon:image,
@@ -151,6 +152,7 @@
 	      
         var content = '<div id="content">'+
       '<div id="bodyContent">'+
+      '<div id="dateContent"><p>Date: ' + date + '</p></div>' +
       '<div id="positionContent"><p>Position: ' + String(latLng['lat']) + ", " + String(latLng['lng']) + '</p></div>' +
       '<div id="stockContent"><p>Capelin Stock: ' + stock + '</p></div>' 
       '</div>'+
