@@ -161,6 +161,7 @@
         google.maps.event.addListener(marker,'click', (function(marker,content,infoWindow){ 
         return function() {
           infoWindow.setContent(content);
+	  infowindow.maxWidth(250);
           infoWindow.open(map,this);
           };
         $infoWindowContent.width($infoWindowContent.width());
