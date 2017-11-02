@@ -55,19 +55,17 @@
 	for (var i=0;i<maximumSamples;i++) {
 	  markers[i] = [];
 	  arrayIndex = 0;
-	  console.log("About to open file..." + i);
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
-	  console.log("xml httml opened... " + i);
 	  xmlhttp.send();
-	  console.log("xml httml sent... " + i);
-  	  xmlhttp.onreadystatechange = function() {
-	    console.log("this.readyState = " + this.readyState);
- 	    console.log("this.status = " + this.status);
-   	    if (this.readyState == 4 && this.status == 200) {
-	      console.log("About to call myFunction with file " + i);
-   	      myFunction(this);
-  	    }
- 	  };
+	  myFunction(this);
+  	//  xmlhttp.onreadystatechange = function() {
+//	    console.log("this.readyState = " + this.readyState);
+ //	    console.log("this.status = " + this.status);
+  // 	    if (this.readyState == 4 && this.status == 200) {
+//	      console.log("About to call myFunction with file " + i);
+  // 	      myFunction(this);
+//  	    }
+// 	  };
 	  markersIndex = markersIndex + 1;
 	}
 		
@@ -87,7 +85,7 @@
 	minLong = 999999;
   	txt = "";
 	
-	console.log("markersIndex = " + markersIndex);
+	console.log("About to parse file..... " + markersIndex);
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
 
