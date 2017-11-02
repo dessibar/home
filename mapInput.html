@@ -60,6 +60,7 @@
 	for (var i=0;i<maximumSamples;i++) {
 	  //markers[markersIndex] = [];
 	  arrayIndex = 0;
+	  console.log("About to open file...");
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
   	  xmlhttp.onreadystatechange = function() {
