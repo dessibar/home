@@ -48,6 +48,7 @@
 	   
 	function loadPinpoints(loc) {
 	  loadXMLDoc(loc);
+	  console.log("markersIndex = " + markersIndex);
 	  clearMarkers();
 	  showMarkersOnIndex();
 	  updateLabel();
