@@ -234,7 +234,7 @@
 	   
 	function setMapOnAll(map) {
 	  for (var j = 0; j < maximumSamples; j++){
-            for (var i = 0; i < markers.length; i++) {
+            for (var i = 0; i < markers[j].length; i++) {
               markers[j][i].setMap(map);
             }
 	  }
