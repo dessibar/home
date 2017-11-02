@@ -24,12 +24,9 @@
 	 
    <p id="acousticText"></p>
 
-<!--   <button onclick="loadXMLDoc('Svalbard')">Svalbard Sample</button>
+   <button onclick="loadXMLDoc('Svalbard')">Svalbard Sample</button>
    <button onclick="loadXMLDoc('Icelandic')">Icelandic Sample</button>
-	-->
-
-   <button onclick="loadPinpoints('Svalbard')">Svalbard Sample</button>
-   <button onclick="loadPinpoints('Icelandic')">Icelandic Sample</button>
+	
    <button onclick="moveBack()">Go Back</button>
    <button onclick="moveForward()">Go Forward</button>
    <label id="currentSample">Current Sample ID: </label>
@@ -49,25 +46,13 @@
 	var minLong;
 	var markersIndex;
 	var arrayIndex;
-	   
-	function loadPinpoints(loc) {
-	  loadXMLDoc(loc);
-	  console.log("markersIndex = " + markersIndex);
-//	  markersIndex = maximumSamples - 1;
-//	  clearMarkers();
-//	  showMarkersOnIndex();
-//	  updateLabel();
-	}
 	
-	   
 	function loadXMLDoc(location) {
-	console.log("LOAD XML DOC FUNCTION");
 	var xmlhttp = [];
 	markersIndex = 0;
 	deleteMarkers();
 	for (var i=0;i<maximumSamples;i++) {
 	  xmlhttp[i] = new XMLHttpRequest();
-	  markers[i] = [];
 	  arrayIndex = 0;
 	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp[i].send();
@@ -270,6 +255,9 @@
 	function deleteMarkers() {
           clearMarkers();
           markers = [];
+	  for (var i=0;i<maximumSamples;i++) {
+	    markers[i] = [];
+	  }
         }
 	   
 	function deleteMarkersOnIndex() {
