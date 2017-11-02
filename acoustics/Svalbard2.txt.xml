@@ -17793,7 +17793,7 @@
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
           <sa_by_acocat acocat="16">
-            <sa ch="1">2.0</sa>
+            <sa ch="1">15.0</sa>
           </sa_by_acocat>
           <sa_by_acocat acocat="100">
             <sa ch="1">330.0</sa>
@@ -17810,7 +17810,7 @@
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
           <sa_by_acocat acocat="16">
-            <sa ch="1">2.0</sa>
+            <sa ch="1">22.0</sa>
           </sa_by_acocat>
           <sa_by_acocat acocat="100">
             <sa ch="1">287.0</sa>
@@ -17827,7 +17827,7 @@
         <num_pel_ch>1</num_pel_ch>
         <ch_type type="P">
           <sa_by_acocat acocat="16">
-            <sa ch="1">2.0</sa>
+            <sa ch="1">24.0</sa>
           </sa_by_acocat>
           <sa_by_acocat acocat="100">
             <sa ch="1">278.0</sa>
