@@ -108,19 +108,19 @@
 		if (saData[j].childNodes[0].nodeValue < 50) {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
-                      scaledSize: new google.maps.Size((stocknumber*100)/150, (stocknumber*100)/150)
+                      scaledSize: new google.maps.Size((stocknumber*100)/150+10, (stocknumber*100)/150+10)
 		   }
 		}
 		else if (saData[j].childNodes[0].nodeValue < 100) {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-yellow-tilted.png',
-                      scaledSize: new google.maps.Size((stocknumber*100)/120, (stocknumber*100)/120)
+                      scaledSize: new google.maps.Size((stocknumber*100)/120+10, (stocknumber*100)/120+10)
                    }
 		}
 		else {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-red-tilted.png',
-                      scaledSize: new google.maps.Size((stocknumber*100)/3000, (stocknumber*100)/3000)
+                      scaledSize: new google.maps.Size((stocknumber*100)/3000+10, (stocknumber*100)/3000+10)
                    }
 		}
 		
