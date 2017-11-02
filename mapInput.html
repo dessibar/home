@@ -57,7 +57,9 @@
 	  arrayIndex = 0;
 	  console.log("About to open file..." + i);
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
+	  console.log("xml httml opened... " + i);
 	  xmlhttp.send();
+	  console.log("xml httml sent... " + i);
   	  xmlhttp.onreadystatechange = function() {
 	    console.log("this.readyState = " + this.readyState);
  	    console.log("this.status = " + this.status);
