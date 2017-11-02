@@ -49,7 +49,7 @@
   	var xmlhttp = new XMLHttpRequest();
 	markersIndex = 0;
 	for (var i=0;i<maximumSamples;i++) {
-	  xmlhttp.open("GET", "/home/acoustics/" + location + i".txt.xml", true)
+	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
   	  xmlhttp.onreadystatechange = function() {
    	    if (this.readyState == 4 && this.status == 200) {
