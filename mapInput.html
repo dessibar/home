@@ -233,8 +233,9 @@
   	}    
 	   
 	function setMapOnAll(map) {
-	  for (var j = 0; j < maximumSamples; j++){
-            for (var i = 0; i < markers[j].length; i++) {
+	  var j, i;
+	  for (j = 0; j < maximumSamples; j++){
+            for (i = 0; i < markers[j].length; i++) {
               markers[j][i].setMap(map);
             }
 	  }
@@ -268,7 +269,7 @@
           markers = [];
         }
 	   
-	function deleteMarkersonIndex() {
+	function deleteMarkersOnIndex() {
           clearMarkers(markersIndex);
           markers[markersIndex] = [];
         }
