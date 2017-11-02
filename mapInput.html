@@ -45,6 +45,13 @@
 	var minLong;
 	var markersIndex;
 	var arrayIndex;
+	   
+	function loadPinpoints(loc) {
+	  loadXMLDoc(loc);
+	  clearMarkers();
+	  showMarkersOnIndex();
+	  updateLabel();
+	}
 	
 	   
 	function loadXMLDoc(location) {
@@ -69,11 +76,6 @@
   	    }
  	  };
 	}
-		
-//	markersIndex = markersIndex - 1;
-//	showMarkersOnIndex();
-		
-//	updateLabel();
 	
 	}
 	   
