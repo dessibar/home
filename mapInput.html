@@ -58,13 +58,15 @@
         var minLat;
 	var minLong;
 	var markersIndex;
+	var arrayIndex;
 	
 	   
 	function loadXMLDoc(location) {
 	console.log("LOAD XML DOC FUNCTION");
   	var xmlhttp = new XMLHttpRequest();
-	markersIndex = 1;
+	markersIndex = 0;
 	for (var i=0;i<maximumSamples;i++) {
+	  arrayIndex = 0;
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
   	  xmlhttp.onreadystatechange = function() {
@@ -222,12 +224,14 @@
 	console.log("MARKERS INDEX: " + markersIndex);
 	console.log("MARKERS: " + markers[0]);
 	     
-	markers[markersIndex].push(marker);
+	//markers[markersIndex].push(marker);
+	markers[markersIndex][arrayIndex] = marker;
+	arrayIndex = arrayIndex + 1;
 	
   	}    
 	   
 	function setMapOnAll(map) {
-	  for (var j = 1; j < markersIndex; j++){
+	  for (var j = 0; j < markersIndex; j++){
             for (var i = 0; i < markers.length; i++) {
               markers[j][i].setMap(map);
             }
