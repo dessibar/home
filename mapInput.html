@@ -85,7 +85,7 @@
 	
 	  for (j = 0; j < saData.length; j++) {
 	    if (saData[j].parentNode.getAttribute("acocat") == "16") {
-		stocknumber = saData[j].childNodes[0].nodeValue;
+		stockNumber = saData[j].childNodes[0].nodeValue;
 		    
 		latLng = {
                    lat: Number(latData[0].childNodes[0].nodeValue),
@@ -106,27 +106,28 @@
 		}
 		    
 		    
-		if (saData[j].childNodes[0].nodeValue < 10) {}
-		else if (saData[j].childNodes[0].nodeValue < 50) {
+		if (stockNumber < 10) {
+		}
+		else if (stockNumber < 50) {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
-                      scaledSize: new google.maps.Size((stocknumber*100)/150+10, (stocknumber*100)/150+10)
+                      scaledSize: new google.maps.Size((stockNumber*100)/150+10, (stockNumber*100)/150+10)
 		   }
 		}
-		else if (saData[j].childNodes[0].nodeValue < 100) {
+		else if (stockNumber < 100) {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-yellow-tilted.png',
-                      scaledSize: new google.maps.Size((stocknumber*100)/120+20, (stocknumber*100)/120+20)
+                      scaledSize: new google.maps.Size((stockNumber*100)/120+20, (stockNumber*100)/120+20)
                    }
 		}
 		else {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-red-tilted.png',
-                      scaledSize: new google.maps.Size((stocknumber*100)/3000+30, (stocknumber*100)/3000+30)
+                      scaledSize: new google.maps.Size((stockNumber*100)/3000+30, (stockNumber*100)/3000+30)
                    }
 		}
 		
-	        addMarker(capelinImage,stocknumber,stockDate,latLng);
+	        addMarker(capelinImage,stockNumber,stockDate,latLng);
 	    }
 	  }          
 		
