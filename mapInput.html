@@ -214,9 +214,9 @@
 	  }
         }
 	   
-	function setMapOnAll(map,markerIndex) {
+	function setMapOnIndex(map) {
           for (var i = 0; i < markers.length; i++) {
-            markers[markerIndex][i].setMap(map);
+            markers[markersIndex][i].setMap(map);
           }
         }
 	   
@@ -224,16 +224,16 @@
           setMapOnAll(null);
         }
 	  
-	function clearMarkers(markerIndex) {
-          setMapOnAll(null,markerIndex);
+	function clearMarkersOnIndex() {
+          setMapOnIndex(null,markersIndex);
         }
 	   
 	function showMarkers() {
           setMapOnAll(map);
         }
 	   
-	function showMarkers(markerIndex) {
-          setMapOnAll(map,markerIndex);
+	function showMarkersOnIndex() {
+          setMapOnIndex(map,markersIndex);
         }
 	   
 	function deleteMarkers() {
@@ -241,9 +241,9 @@
           markers = [];
         }
 	   
-	function deleteMarkers(markerIndex) {
-          clearMarkers(markerIndex);
-          markers[markerIndex] = [];
+	function deleteMarkersonIndex() {
+          clearMarkers(markersIndex);
+          markers[markersIndex] = [];
         }
 	   
 	function moveToLocation(lat, lng){
