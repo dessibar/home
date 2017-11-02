@@ -55,11 +55,12 @@
 	for (var i=0;i<maximumSamples;i++) {
 	  markers[i] = [];
 	  arrayIndex = 0;
-	  console.log("About to open file...");
+	  console.log("About to open file..." + i);
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
   	  xmlhttp.onreadystatechange = function() {
    	    if (this.readyState == 4 && this.status == 200) {
+	      console.log("About to call myFunction with file " + i);
    	      myFunction(this);
   	    }
  	  };
@@ -67,10 +68,6 @@
 	}
 		
 	markersIndex = markersIndex - 1;
-	markersIndex = markersIndex - 1;
-		
-	console.log("markersIndex = " + markersIndex);
-		
 	showMarkersOnIndex();
 		
 	updateLabel();
