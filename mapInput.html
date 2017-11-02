@@ -248,7 +248,7 @@
         }
 	  
 	function clearMarkersOnIndex() {
-          setMapOnIndex(null,markersIndex);
+          setMapOnIndex(null);
         }
 	   
 	function showMarkers() {
@@ -256,7 +256,7 @@
         }
 	   
 	function showMarkersOnIndex() {
-          setMapOnIndex(map,markersIndex);
+          setMapOnIndex(map);
         }
 	   
 	function deleteMarkers() {
@@ -276,18 +276,18 @@
 	   
 	function moveForward(){
 	  if (markersIndex < maximumSamples) {
-	    clearMarkers();
+	    clearMarkersOnIndex();
 	    markersIndex = markersIndex + 1;
-	    showMarkers(markersIndex);
+	    showMarkersOnIndex();
 	    updateLabel();
 	  }
 	}
 	   
 	function moveBack(){
 	  if (markersIndex > 0) {
-	    clearMarkers();
+	    clearMarkersOnIndex();
 	    markersIndex = markersIndex - 1;
-	    showMarkers(markersIndex);
+	    showMarkersOnIndex();
 	    updateLabel();
 	  }
 	}
