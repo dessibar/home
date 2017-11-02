@@ -228,6 +228,7 @@
         }
 	   
 	function setMapOnIndex(map) {
+	  console.log("MARKERS INDEX: " + markersIndex);
           for (var i = 0; i < markers[markersIndex].length; i++) {
             markers[markersIndex][i].setMap(map);
           }
