@@ -36,10 +36,7 @@
 	   
 	var markers = [];
 	var maximumSamples = 2;
-	   
-	markers[0] = new Array();
-	markers[1] = new Array();
-	  
+
 	for (var i=0;i<maximumSamples;i++) {
 	  console.log("Initialized Array... " + i);
 	  markers[i] = [];
@@ -87,6 +84,8 @@
         minLat = 999999;
 	minLong = 999999;
   	txt = "";
+	
+	console.log("markersIndex = " + markersIndex);
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
 
