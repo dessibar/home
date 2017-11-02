@@ -270,11 +270,14 @@
         }
 	   
 	function moveForward(){
-	  if (markersIndex < maximumSamples) {
+	  if ((markersIndex + 1) < maximumSamples) {
 	    clearMarkersOnIndex();
 	    markersIndex = markersIndex + 1;
 	    showMarkersOnIndex();
 	    updateLabel();
+	  }
+	  else {
+	    break;
 	  }
 	}
 	   
@@ -284,6 +287,9 @@
 	    markersIndex = markersIndex - 1;
 	    showMarkersOnIndex();
 	    updateLabel();
+	  }
+	  else {
+	    break;
 	  }
 	}
 	  
