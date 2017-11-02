@@ -63,7 +63,7 @@
 	function loadXMLDoc(location) {
 	console.log("LOAD XML DOC FUNCTION");
   	var xmlhttp = new XMLHttpRequest();
-	markersIndex = 0;
+	markersIndex = 1;
 	for (var i=0;i<maximumSamples;i++) {
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
