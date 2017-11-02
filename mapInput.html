@@ -24,35 +24,41 @@
 	 
    <p id="acousticText"></p>
    <button onclick="loadXMLDoc('Svalbard')">Svalbard Sample</button>
-   <button onclick="loadXMLDoc('Iceland')">Icelandic Sample</button>
+   <button onclick="loadXMLDoc('Icelandic')">Icelandic Sample</button>
+	
+   <button onclick="loadXMLDoc('Icelandic')">Go Back</button>
+   <label id="currentSample">Current Sample ID: </label>
+   <button onclick="loadXMLDoc('Icelandic')">Go Forward</button>
    <div id="map"></div>
 	
    <script> 
 	   
-	var markers = [];
+	var markers = [][];
 	var map;
 	var infoWindow;
 	var maxLat;
 	var maxLong;
         var minLat;
 	var minLong;
-	var maxStock;
+	var markersIndex;
+	var maximumSamples = 2;
 	   
 	function loadXMLDoc(location) {
 	console.log("LOAD XML DOC FUNCTION");
   	var xmlhttp = new XMLHttpRequest();
-	if (location == "Svalbard"){
-	xmlhttp.open("GET", "/home/acoustics/JH_LCS.txt.xml", true);
+	markersIndex = 0;
+	for (int i=0;i<maximumSamples;i++) {
+	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1)".txt.xml", true)
+	  xmlhttp.send();
+  	  xmlhttp.onreadystatechange = function() {
+   	    if (this.readyState == 4 && this.status == 200) {
+   	      myFunction(this);
+  	    }
+ 	  };
 	}
-	else if (location == "Iceland") {
-	xmlhttp.open("GET", "/home/acoustics/Icelandic.txt.xml", true);
-	}
-	xmlhttp.send();
-  	xmlhttp.onreadystatechange = function() {
-   	 if (this.readyState == 4 && this.status == 200) {
-   	   myFunction(this);
-  	  }
- 	 }; 
+		
+	updateLabel();
+	
 	}
 	   
 	function myFunction(xml) {
@@ -139,8 +145,6 @@
 	console.log("maxLong = " + maxLong);
 	console.log("minLong = " + minLong);
 	
-	console.log("maxStock = " + maxStock);
-	
 	moveToLocation((maxLat+minLat)/2,(maxLong+minLong)/2);
 		
 	document.getElementById("acousticText").innerHTML = txt;
@@ -197,22 +201,38 @@
         infoWindow.close();
         });
 	      
-	markers.push(marker);
+	markers[markersIndex].push(marker);
 	
   	}    
 	   
 	function setMapOnAll(map) {
+	  for (var j = 0; j < markersIndex; j++){
+            for (var i = 0; i < markers.length; i++) {
+              markers[j][i].setMap(map);
+            }
+	  }
+        }
+	   
+	function setMapOnAll(map,markerIndex) {
           for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(map);
+            markers[markerIndex][i].setMap(map);
           }
         }
 	   
 	function clearMarkers() {
           setMapOnAll(null);
         }
+	  
+	function clearMarkers(markerIndex) {
+          setMapOnAll(null,markerIndex);
+        }
 	   
 	function showMarkers() {
           setMapOnAll(map);
+        }
+	   
+	function showMarkers(markerIndex) {
+          setMapOnAll(map,markerIndex);
         }
 	   
 	function deleteMarkers() {
@@ -220,10 +240,37 @@
           markers = [];
         }
 	   
+	function deleteMarkers(markerIndex) {
+          clearMarkers(markerIndex);
+          markers[markerIndex] = [];
+        }
+	   
 	function moveToLocation(lat, lng){
         var center = new google.maps.LatLng(lat, lng);
         map.panTo(center);
         }
+	   
+	function moveForward(){
+	  if (markersIndex < maximumSamples) {
+	    clearMarkers();
+	    markersIndex = markersIndex + 1;
+	    showMarkers(markersIndex);
+	    updateLabel();
+	  }
+	}
+	   
+	function moveBack(){
+	  if (markersIndex > 0) {
+	    clearMarkers();
+	    markersIndex = markersIndex - 1;
+	    showMarkers(markersIndex);
+	    updateLabel();
+	  }
+	}
+	  
+	function updateLabel(){
+	  document.getElementById('currentSample').innerHTML = 'Current Sample ID: ' + (markersIndex+1);	
+	}
 	     
 				 
 							 
