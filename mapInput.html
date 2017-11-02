@@ -36,6 +36,7 @@
 	var maxLong;
         var minLat;
 	var minLong;
+	var maxStock;
 	   
 	function loadXMLDoc(location) {
 	console.log("LOAD XML DOC FUNCTION");
@@ -62,6 +63,7 @@
 	maxLong = 0;
         minLat = 999999;
 	minLong = 999999;
+	maxStock = 0;
   	txt = "";
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
@@ -85,6 +87,9 @@
 	  for (j = 0; j < saData.length; j++) {
 	    if (saData[j].parentNode.getAttribute("acocat") == "16") {
 		stocknumber = saData[j].childNodes[0].nodeValue;
+		if (stocknumber > maxStock) {
+		   maxStock = stocknumber;
+		}
 		    
 		latLng = {
                    lat: Number(latData[0].childNodes[0].nodeValue),
@@ -134,6 +139,7 @@
 	console.log("maxLong = " + maxLong);
 	console.log("minLong = " + minLong);
 	
+	console.log("maxStock = " + maxStock);
 	
 	moveToLocation((maxLat+minLat)/2,(maxLong+minLong)/2);
 		
