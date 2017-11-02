@@ -36,11 +36,6 @@
 	   
 	var markers = [];
 	var maximumSamples = 2;
-
-	for (var i=0;i<maximumSamples;i++) {
-	  console.log("Initialized Array... " + i);
-	  markers[i] = [];
-	}
 	   
 	var map;
 	var infoWindow;
@@ -58,7 +53,7 @@
 	markersIndex = 0;
 	deleteMarkers();
 	for (var i=0;i<maximumSamples;i++) {
-	  //markers[markersIndex] = [];
+	  markers[i] = [];
 	  arrayIndex = 0;
 	  console.log("About to open file...");
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
