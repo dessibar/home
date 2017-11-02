@@ -53,6 +53,7 @@
 	markersIndex = 0;
 	deleteMarkers();
 	for (var i=0;i<maximumSamples;i++) {
+	  markers[markersIndex] = [];
 	  arrayIndex = 0;
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
@@ -78,8 +79,6 @@
         minLat = 999999;
 	minLong = 999999;
   	txt = "";
-		
-	markers[markersIndex] = [];
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
 
@@ -278,19 +277,15 @@
 	   
 	function moveBack(){
 	  if (markersIndex > 0) {
-  	    console.log("Clearing markers...");
 	    clearMarkersOnIndex();
- 	    console.log("Reducing index...");
 	    markersIndex = markersIndex - 1;
-	    console.log("Showing markers...");
 	    showMarkersOnIndex();
-  	    console.log("Updating label...");
 	    updateLabel();
 	  }
 	}
 	  
 	function updateLabel(){
-	  document.getElementById('currentSample').innerHTML = 'Current Sample ID: ' + markersIndex;	
+	  document.getElementById('currentSample').innerHTML = 'Current Sample ID: ' + (markersIndex+1);	
 	}
 	     
 				 
