@@ -105,7 +105,7 @@
 		   minLong = Number(lonData[0].childNodes[0].nodeValue);
 		}
 		    
-		if (saData[j].childNodes[0].nodeValue < 50) {
+		if (saData[j].childNodes[0].nodeValue < 50 && saData[j].childNodes[0].nodeValue > 10) {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
                       scaledSize: new google.maps.Size((stocknumber*100)/150+10, (stocknumber*100)/150+10)
