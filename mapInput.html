@@ -34,7 +34,7 @@
 	
    <script> 
 	   
-	var markers = new Array([]);
+	var markers = [];
 	var map;
 	var infoWindow;
 	var maxLat;
@@ -49,6 +49,7 @@
   	var xmlhttp = new XMLHttpRequest();
 	markersIndex = 0;
 	for (var i=0;i<maximumSamples;i++) {
+	  markers[markersIndex] = [];
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
   	  xmlhttp.onreadystatechange = function() {
