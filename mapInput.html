@@ -41,6 +41,16 @@
 	  markers[i] = [];
 	}  
 	   
+	var arr = [];
+	for(var x = 0; x < 100; x++){
+   	 arr[x] = [];    
+	    for(var y = 0; y < 100; y++){ 
+ 	       arr[x][y] = x*y;    
+	    }    
+	}
+
+	console.log("TWO DIMENSIONAL: " + arr[10][11]);
+	   
 	var map;
 	var infoWindow;
 	var maxLat;
