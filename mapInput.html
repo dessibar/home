@@ -41,10 +41,6 @@
 	var markers = [];
 	var maximumSamples = 3;
 	   
-	for (var i=0;i<maximumSamples;i++) {
-	   markers[i] = [];
-	}
-	   
 	var map;
 	var infoWindow;
 	var maxLat;
@@ -71,7 +67,7 @@
 	deleteMarkers();
 	for (var i=0;i<maximumSamples;i++) {
 	  xmlhttp[i] = new XMLHttpRequest();
-//	  markers[i] = [];
+	  markers[i] = [];
 	  arrayIndex = 0;
 	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp[i].send();
