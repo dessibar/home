@@ -49,15 +49,16 @@
 	   
 	function loadXMLDoc(location) {
 	console.log("LOAD XML DOC FUNCTION");
-  	var xmlhttp = new XMLHttpRequest();
+	var xmlhttp = [];
 	markersIndex = 0;
 	deleteMarkers();
 	for (var i=0;i<maximumSamples;i++) {
+	  xmlhttp[i] = new XMLHttpRequest();
 	  markers[i] = [];
 	  arrayIndex = 0;
-	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
-	  xmlhttp.send();
-  	    xmlhttp.onreadystatechange = function() {
+	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
+	  xmlhttp[i].send();
+  	    xmlhttp[i].onreadystatechange = function() {
 	    console.log("this.readyState = " + this.readyState);
  	    console.log("this.status = " + this.status);
    	    if (this.readyState == 4 && this.status == 200) {
