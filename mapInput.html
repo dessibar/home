@@ -280,7 +280,7 @@
 	   
 	function moveForward(){
 	  if ((markersIndex + 1) < maximumSamples) {
-	    clearMarkersOnIndex();
+	    clearMarkers();
 	    markersIndex = markersIndex + 1;
 	    showMarkersOnIndex();
 	    updateLabel();
@@ -289,8 +289,8 @@
 	   
 	function moveBack(){
 	  if (markersIndex > 0) {
-	    markersIndex = markersIndex - 1
-	    clearMarkersOnIndex();
+	    clearMarkers();
+	    markersIndex = markersIndex - 1;
 	    showMarkersOnIndex();
 	    updateLabel();
 	  }
