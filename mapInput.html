@@ -112,20 +112,20 @@
 		else if (stockNumber < 50) {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-green-tilted.png',
-                      scaledSize: new google.maps.Size((stockNumber*100)/150+10, (stockNumber*100)/150+10)
+                      scaledSize: new google.maps.Size(stockNumber/100+10, stockNumber/100+10)
 		   }
 		}
 		else if (stockNumber < 100) {
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-yellow-tilted.png',
-                      scaledSize: new google.maps.Size((stockNumber*100)/120+20, (stockNumber*100)/120+20)
+                      scaledSize: new google.maps.Size(stockNumber/100+20, stockNumber/100+20)
                    }
 		}
-		else {
+		else 
    		   var capelinImage = {
                       url: 'https://raw.githubusercontent.com/dessibar/home/master/images/capelin-red-tilted.png',
-                      scaledSize: new google.maps.Size((stockNumber*100)/1000+30, (stockNumber*100)/1000+30)
-                   }
+                      scaledSize: new google.maps.Size(stockNumber/100+50, stockNumber/100+50)
+		   }
 		}
 		
 	        addMarker(capelinImage,stockNumber,stockDate,latLng);
