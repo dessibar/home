@@ -278,9 +278,13 @@
 	   
 	function moveBack(){
 	  if (markersIndex > 0) {
+  	    console.log("Clearing markers...");
 	    clearMarkersOnIndex();
+ 	    console.log("Reducing index...");
 	    markersIndex = markersIndex - 1;
+	    console.log("Showing markers...");
 	    showMarkersOnIndex();
+  	    console.log("Updating label...");
 	    updateLabel();
 	  }
 	}
