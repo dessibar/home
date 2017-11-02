@@ -59,10 +59,12 @@
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
   	  xmlhttp.onreadystatechange = function() {
-   	  //  if (this.readyState == 4 && this.status == 200) {
+	    console.log("this.readyState = " + this.readyState);
+ 	    console.log("this.status = " + this.status);
+   	    if (this.readyState == 4 && this.status == 200) {
 	      console.log("About to call myFunction with file " + i);
    	      myFunction(this);
-  	 //   }
+  	    }
  	  };
 	  markersIndex = markersIndex + 1;
 	}
