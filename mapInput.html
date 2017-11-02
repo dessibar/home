@@ -50,6 +50,7 @@
 	markersIndex = 0;
 	for (var i=0;i<maximumSamples;i++) {
 	  markers[markersIndex] = [];
+	  markers[0] = "HOLA";
 	  xmlhttp.open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp.send();
   	  xmlhttp.onreadystatechange = function() {
