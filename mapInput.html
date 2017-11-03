@@ -45,7 +45,6 @@
         var minLat;
 	var minLong;
 	var markersIndex;
-	var markersPosition;
 	var arrayIndex;
 	
 	function loadXMLDoc(location) {
@@ -58,20 +57,20 @@
 	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp[i].send();
   	    xmlhttp[i].onreadystatechange = function() {
- 	    markersPosition = i;
 	    console.log("this.readyState = " + this.readyState);
  	    console.log("this.status = " + this.status);
    	    if (this.readyState == 4 && this.status == 200) {
-   	      myFunction(this,markersPosition);
+   	      myFunction(this);
 	      markersIndex = markersIndex + 1;
 	      arrayIndex = 0;
   	    }
  	  };
+	  console.log("markersIndex = " + markersIndex);
 	}
 	
 	}
 	   
-	function myFunction(xml,markersPosition) {
+	function myFunction(xml) {
   	var stockNumber, latLng, distanceArray, latData, lonData, saData, i, j, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
 	maxLat = 0;
@@ -80,10 +79,9 @@
 	minLong = 999999;
   	txt = "";
 	
-	console.log("About to parse file..... " + markersPosition);
+	console.log("About to parse file..... " + markersIndex);
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
-
 	console.log("Primer Long: " + distanceArray[0].getElementsByTagName("lon_start")[0].childNodes[0].nodeValue)
 	if (distanceArray[0].getElementsByTagName("lon_start")[0].childNodes[0].nodeValue > 0) {
 	   maxLong = 0;
@@ -162,7 +160,6 @@
 	document.getElementById("acousticText").innerHTML = txt;
 	
      }
-
 	   
      function initMap(){
         var options = {
@@ -176,7 +173,6 @@
       google.maps.event.addListenerOnce(map, 'idle', function(){
       jQuery('.gm-style-iw').prev('div').remove();
       }); 
-
      }
         
       function addMarker(image,stock,date,latLng){
@@ -207,7 +203,6 @@
         google.maps.event.addListener(marker, 'click', function() {
           infoWindow.open(map,marker);
         });
-
         // Event that closes the Info Window with a click on the map
         google.maps.event.addListener(map, 'click', function() {
         infoWindow.close();
@@ -217,7 +212,7 @@
 	console.log("ARRAY INDEX: " + arrayIndex);
 	     
 	//markers[markersIndex].push(marker);
-	markers[markersPosition][arrayIndex] = marker;
+	markers[markersIndex][arrayIndex] = marker;
 	arrayIndex = arrayIndex + 1;
 	
   	}    
