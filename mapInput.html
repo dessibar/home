@@ -45,6 +45,7 @@
         var minLat;
 	var minLong;
 	var markersIndex;
+	var markersPosition;
 	var arrayIndex;
 	
 	function loadXMLDoc(location) {
@@ -56,11 +57,11 @@
 	  arrayIndex = 0;
 	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp[i].send();
-  	    xmlhttp[i].onreadystatechange = function(i) {
+  	    xmlhttp[i].onreadystatechange = function(markersPosition) {
 	    console.log("this.readyState = " + this.readyState);
  	    console.log("this.status = " + this.status);
    	    if (this.readyState == 4 && this.status == 200) {
-   	      myFunction(this,i);
+   	      myFunction(this,markersPosition);
 	      markersIndex = markersIndex + 1;
 	      arrayIndex = 0;
   	    }
