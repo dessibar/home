@@ -54,7 +54,7 @@
 	for (var i=0;i<maximumSamples;i++) {
 	  xmlhttp[i] = new XMLHttpRequest();
 	  arrayIndex = 0;
-	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
+	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", false)
 	  xmlhttp[i].send();
   	    xmlhttp[i].onreadystatechange = function() {
 	    console.log("this.readyState = " + this.readyState);
