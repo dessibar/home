@@ -57,20 +57,20 @@
 	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	  xmlhttp[i].send();
   	    xmlhttp[i].onreadystatechange = function() {
+	    var markersPosition = i;
 	    console.log("this.readyState = " + this.readyState);
  	    console.log("this.status = " + this.status);
    	    if (this.readyState == 4 && this.status == 200) {
-   	      myFunction(this);
+   	      myFunction(this,markersPosition);
 	      markersIndex = markersIndex + 1;
 	      arrayIndex = 0;
   	    }
  	  };
-	  console.log("markersIndex = " + markersIndex);
 	}
 	
 	}
 	   
-	function myFunction(xml) {
+	function myFunction(xml,markersPosition) {
   	var stockNumber, latLng, distanceArray, latData, lonData, saData, i, j, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
 	maxLat = 0;
@@ -79,7 +79,7 @@
 	minLong = 999999;
   	txt = "";
 	
-	console.log("About to parse file..... " + markersIndex);
+	console.log("About to parse file..... " + markersPosition);
 	
   	distanceArray = xmlDoc.getElementsByTagName("distance");
 
@@ -216,7 +216,7 @@
 	console.log("ARRAY INDEX: " + arrayIndex);
 	     
 	//markers[markersIndex].push(marker);
-	markers[markersIndex][arrayIndex] = marker;
+	markers[markersPosition][arrayIndex] = marker;
 	arrayIndex = arrayIndex + 1;
 	
   	}    
