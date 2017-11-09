@@ -51,7 +51,6 @@
 	initHeatmap();
 	var xmlhttp = [];
 	markersIndex = 0;
-  heatmapIndex = 0;
 	deleteMarkers();
 	for (var i=0;i<maximumSamples;i++) {
 	  xmlhttp[i] = new XMLHttpRequest();
@@ -311,6 +310,7 @@
 	   
 	function moveBack(){
 	  if (markersIndex > 0) {
+	    console.log("heatmapPoints[markersIndex]: " + heatmapPoints[markersIndex]);
 	    clearMarkers();
 	    markersIndex = markersIndex - 1;
 	    showMarkersOnIndex();
