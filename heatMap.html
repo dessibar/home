@@ -48,6 +48,7 @@
 	var arrayIndex;
 	
 	function loadXMLDoc(location) {
+	initHeatmap();
 	var xmlhttp = [];
 	markersIndex = 0;
   heatmapIndex = 0;
@@ -71,7 +72,6 @@
 	}
 	   
 	function myFunction(xml) {
-	initHeatmap();
   	var stockNumber, latLng, distanceArray, latData, lonData, saData, i, j, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
 	maxLat = 0;
