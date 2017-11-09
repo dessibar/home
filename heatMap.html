@@ -246,6 +246,7 @@
 	function setMapOnAll(map) {
 	  for (var j = 0; j < maximumSamples; j++){
 	    if (markers[j] == undefined) markers[j] = [];
+	    if (heatmapPoints[j] == undefined) heatmapPoints[j] = [];
             for (var i = 0; i < markers[j].length; i++) {
               markers[j][i].setMap(map);
             }
