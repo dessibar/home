@@ -312,7 +312,7 @@
 	  if ((markersIndex + 1) < maximumSamples) {
 	    clearMarkers();
 	    markersIndex = markersIndex + 1;
-	    showMarkersOnIndex();
+	    if (pinpointsFlag) showMarkersOnIndex();
 	    updateLabel();
 	  }
 	}
@@ -329,7 +329,7 @@
 		 
 	    clearMarkers();
 	    markersIndex = markersIndex - 1;
-	    showMarkersOnIndex();
+	    if (pinpointsFlag) showMarkersOnIndex();
 	    updateLabel();
 	  }
 	}
