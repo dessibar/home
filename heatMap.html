@@ -66,8 +66,8 @@
  	    console.log("this.status = " + this.status);
    	    if (this.readyState == 4 && this.status == 200) {
    	      myFunction(this);
-	        markersIndex = markersIndex + 1;
-	        arrayIndex = 0;
+	      if (markersIndex < (maximumSamples-1)) markersIndex = markersIndex + 1;
+	      arrayIndex = 0;
   	    }
  	  };
 	}
