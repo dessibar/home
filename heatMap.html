@@ -311,7 +311,10 @@
 	   
 	function moveBack(){
 	  if (markersIndex > 0) {
-	    console.log("heatmapPoints[markersIndex]: " + heatmapPoints[markersIndex]);
+	    for (var i=0;i<7;i++){
+		console.log("heatmapPoints[" + i + "]: " + heatmapPoints[i]);   
+	    }
+		 
 	    clearMarkers();
 	    markersIndex = markersIndex - 1;
 	    showMarkersOnIndex();
