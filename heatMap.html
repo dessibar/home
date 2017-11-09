@@ -323,7 +323,11 @@
 	}
 	   
 	function moveBack(){
-	  if (markersIndex > 0) {		 
+	  if (markersIndex > 0) {	
+	    for (var i=0;i<maximumSamples;i++) {
+		console.log("heatmapPoints[" + i + "] = " +heatmapPoints[i]);
+	    }
+	
 	    clearMarkers();
 	    clearHeatmap();
 	    markersIndex = markersIndex - 1;
