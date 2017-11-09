@@ -78,6 +78,11 @@
         minLat = 999999;
 	minLong = 999999;
   	txt = "";
+		
+	heatmapPoints[markersIndex] = {
+	  max: 1000;
+	  data: [];
+	}
 	
 	console.log("About to parse file..... " + markersIndex);
 	
@@ -232,13 +237,14 @@
 	console.log("MARKERS INDEX: " + markersIndex);
 	console.log("ARRAY INDEX: " + arrayIndex);
 	     
-	//markers[markersIndex].push(marker);
 	markers[markersIndex][arrayIndex] = marker;
-  heatmapPoints[markersIndex][arrayIndex] = {
-      lat: String(latLng['lat']), 
-      lng: String(latLng['lng']), 
-      count: 3};
-      
+	      
+	var heatPoint = {
+	  lat: String(latLng['lat']), 
+          lng: String(latLng['lng']), 
+          count: 3	
+	}
+  	heatmapPoints[markersIndex].data.push(heatPoint);      
 	arrayIndex = arrayIndex + 1;
 	
   	}    
