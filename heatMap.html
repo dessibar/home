@@ -276,7 +276,11 @@
         }
 	 
 	function clearHeatmap() {
-	  heatmap.setData({max:0,data:[]});
+	  var empty = {
+  	    max:1000,
+	    data: []
+	  }
+	  heatmap.setData(empty);
 	}
 	   
 	function showMarkersOnIndex() {
@@ -309,6 +313,7 @@
 	function moveForward(){
 	  if ((markersIndex + 1) < maximumSamples) {
 	    clearMarkers();
+	    clearHeatmap();
 	    markersIndex = markersIndex + 1;
 	    if (pinpointsFlag) showMarkersOnIndex();
 	    if (heatmapFlag) showHeatmapOnIndex();
@@ -319,6 +324,7 @@
 	function moveBack(){
 	  if (markersIndex > 0) {		 
 	    clearMarkers();
+	    clearHeatmap();
 	    markersIndex = markersIndex - 1;
 	    if (pinpointsFlag) showMarkersOnIndex();
 	    if (heatmapFlag) showHeatmapOnIndex();
