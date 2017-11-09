@@ -26,6 +26,7 @@
    <button onclick="loadXMLDoc('Svalbard')">Svalbard Sample</button>
    <button onclick="loadXMLDoc('Icelandic')">Icelandic Sample</button>
    <button onclick="togglePinpoints()">Toggle Pinpoints</button>
+   <button onclick="toggleHeatmap()">Toggle Heatmap</button>
 	
    <button onclick="moveBack()">Go Back</button>
    <button onclick="moveForward()">Go Forward</button>
@@ -48,6 +49,7 @@
 	var markersIndex;
 	var arrayIndex;
 	var pinpointsFlag = true;
+	var heatmapFlag = false;
 	
 	function loadXMLDoc(location) {
 	initHeatmap();
@@ -172,7 +174,7 @@
 	heatmap = new HeatmapOverlay(map, 
         {
           // radius should be small ONLY if scaleRadius is true (or small radius is intended)
-          "radius": 2,
+          "radius": 1,
          "maxOpacity": 1, 
          // scales the radius based on map zoom
          "scaleRadius": true, 
@@ -270,8 +272,11 @@
 	   
 	function clearMarkers() {
           setMapOnAll(null);
-          heatmap.setData({max:0,data:[]});
         }
+	 
+	function clearHeatmap() {
+	  heatmap.setData({max:0,data:[]});
+	}
 	   
 	function showMarkersOnIndex() {
           setMapOnIndex(map);
@@ -290,12 +295,6 @@
 	  }
         }
 	   
-	function deleteMarkersOnIndex() {
-          clearMarkers();
-          markers[markersIndex] = [];
-          heatmapPoints[markersIndex] = [];
-        }
-	   
 	function moveToLocation(lat, lng){
         var center = new google.maps.LatLng(lat, lng);
         map.panTo(center);
@@ -306,6 +305,7 @@
 	    clearMarkers();
 	    markersIndex = markersIndex + 1;
 	    if (pinpointsFlag) showMarkersOnIndex();
+	    if (heatmapFlag) showHeatmapOnIndex();
 	    updateLabel();
 	  }
 	}
@@ -323,6 +323,7 @@
 	    clearMarkers();
 	    markersIndex = markersIndex - 1;
 	    if (pinpointsFlag) showMarkersOnIndex();
+	    if (heatmapFlag) showHeatmapOnIndex();
 	    updateLabel();
 	  }
 	}
@@ -341,7 +342,20 @@
  	    pinpointsFlag = true;
 	  }  
 	}
+	   
+	function toggleHeatmap(){
+	  if (heatmapFlag) {
+	    clearHeatmap();
+	    heatmapFlag = false;
+	  }
+  	  else {
+	    showHeatmapOnIndex();
+ 	    heatmapFlag = true;
+	  }  
+	}
 	     
+	   
+	  
 				 
 							 
 							 
