@@ -325,6 +325,7 @@
 	}
 	   
 	function togglePinpoints(){
+	  console.log("Toggling pinpoints for index: " + markersIndex);
 	  if (pinpointsFlag) {
 	    clearMarkers();
 	    pinpointsFlag = false;
@@ -336,6 +337,7 @@
 	}
 	   
 	function toggleHeatmap(){
+	  console.log("Toggling heatmap for index: " + markersIndex);
 	  if (heatmapFlag) {
 	    clearHeatmap();
 	    heatmapFlag = false;
