@@ -172,9 +172,9 @@
      }
 	   
      function initHeatmap(){
-	console.log("heatmap = " + heatmap);
-	heatmap = new HeatmapOverlay(map, 
-        {
+	if (heatmap == undefined) {
+	  heatmap = new HeatmapOverlay(map, 
+          {
           // radius should be small ONLY if scaleRadius is true (or small radius is intended)
           "radius": 1,
          "maxOpacity": 1, 
@@ -190,7 +190,8 @@
           lngField: 'lng',
          // which field name in your data represents the data value - default "value"
          valueField: 'count'
-        });
+          });
+	}
      }
 	   
      function initMap(){
