@@ -266,27 +266,20 @@
           for (var i = 0; i < markers[markersIndex].length; i++) {
             markers[markersIndex][i].setMap(map);
           }
-     //     heatmap.setData(heatmapPoints[markersIndex]);
         }
 	   
 	function clearMarkers() {
           setMapOnAll(null);
-     //     heatmap.setData({data:[]});
-        }
-	  
-	function clearMarkersOnIndex() {
-          setMapOnIndex(null);
-     //     heatmap.setData({data:[]});
-        }
-	   
-	function showMarkers() {
-          setMapOnAll(map);
+          heatmap.setData({max:0,data:[]});
         }
 	   
 	function showMarkersOnIndex() {
           setMapOnIndex(map);
-          heatmap.setData(heatmapPoints[markersIndex]);
         }
+	   
+	function showHeatmapOnIndex() {
+	  heatmap.setData(heatmapPoints[markersIndex]);	
+	}
 	   
 	function deleteMarkers() {
           clearMarkers();
@@ -298,7 +291,7 @@
         }
 	   
 	function deleteMarkersOnIndex() {
-          clearMarkers(markersIndex);
+          clearMarkers();
           markers[markersIndex] = [];
           heatmapPoints[markersIndex] = [];
         }
@@ -340,7 +333,7 @@
 	   
 	function togglePinpoints(){
 	  if (pinpointsFlag) {
-	    clearMarkersOnIndex();
+	    clearMarkers();
 	    pinpointsFlag = false;
 	  }
   	  else {
