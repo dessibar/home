@@ -327,7 +327,7 @@
 	    clearMarkers();
 	    clearHeatmap();
 	    markersIndex = markersIndex - 1;
-	    console.log("FIRST HEATMAP POINT: " + String(heatmapPoint[markersIndex].data[1]['lat']) + String(heatmapPoint[markersIndex].data[1]['lng']));
+	    console.log("FIRST HEATMAP POINT: " + String(heatmapPoints[markersIndex].data[1]['lat']) + String(heatmapPoints[markersIndex].data[1]['lng']));
 	    if (pinpointsFlag) showMarkersOnIndex();
 	    if (heatmapFlag) showHeatmapOnIndex();
 	    updateLabel();
