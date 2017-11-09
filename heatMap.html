@@ -311,15 +311,7 @@
 	}
 	   
 	function moveBack(){
-	  if (markersIndex > 0) {
-	    for (var i=0;i<7;i++){
-		console.log("heatmapPoints[" + i + "]: " + heatmapPoints[i]);   
-	    }
-		  
-	    for (var i=0;i<7;i++){
-		console.log("markers[" + i + "]: " + markers[i]);   
-	    }
-		 
+	  if (markersIndex > 0) {		 
 	    clearMarkers();
 	    markersIndex = markersIndex - 1;
 	    if (pinpointsFlag) showMarkersOnIndex();
