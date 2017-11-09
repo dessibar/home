@@ -263,12 +263,12 @@
 	   
 	function clearMarkers() {
           setMapOnAll(null);
-          heatmap.setData(null);
+          heatmap.setData({data:[]});
         }
 	  
 	function clearMarkersOnIndex() {
           setMapOnIndex(null);
-          heatmap.setData(null);
+          heatmap.setData({data:[]});
         }
 	   
 	function showMarkers() {
