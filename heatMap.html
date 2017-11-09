@@ -25,6 +25,7 @@
 
    <button onclick="loadXMLDoc('Svalbard')">Svalbard Sample</button>
    <button onclick="loadXMLDoc('Icelandic')">Icelandic Sample</button>
+   <button onclick="togglePinpoints()">Toggle Pinpoints</button>
 	
    <button onclick="moveBack()">Go Back</button>
    <button onclick="moveForward()">Go Forward</button>
@@ -46,6 +47,7 @@
 	var minLong;
 	var markersIndex;
 	var arrayIndex;
+	var pinpointsFlag = true;
 	
 	function loadXMLDoc(location) {
 	initHeatmap();
@@ -264,7 +266,7 @@
           for (var i = 0; i < markers[markersIndex].length; i++) {
             markers[markersIndex][i].setMap(map);
           }
-          heatmap.setData(heatmapPoints[markersIndex]);
+     //     heatmap.setData(heatmapPoints[markersIndex]);
         }
 	   
 	function clearMarkers() {
@@ -334,6 +336,17 @@
 	  
 	function updateLabel(){
 	  document.getElementById('currentSample').innerHTML = 'Current Sample ID: ' + (markersIndex+1);	
+	}
+	   
+	function togglePinpoints(){
+	  if (pinpointsFlag) {
+	    clearMarkersOnIndex();
+	    pinpointsFlag = false;
+	  }
+  	  else {
+	    showMarkersOnIndex();
+ 	    pinpointsFlag = true;
+	  }  
 	}
 	     
 				 
