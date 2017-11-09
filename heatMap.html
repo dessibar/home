@@ -324,16 +324,10 @@
 	   
 	function moveBack(){
 	  if (markersIndex > 0) {	
-	    for (var i=0;i<maximumSamples;i++) {
-		console.log("heatmapPoints[" + i + "]");
-		for (var j=0;j<heatmapPoints[i].data.length;j++) {
-		    console.log("heatmapPoints[" + i + "].data[" + j + "] = " + heatmapPoints[i].data[j]);
-		}
-	    }
-	
 	    clearMarkers();
-	    clearHeatmap();
+	    clearHeatmap();  String(latLng['lat'])
 	    markersIndex = markersIndex - 1;
+	    console.log("FIRST HEATMAP POINT: " + String(heatmapPoint[markersIndex].data[1]['lat']) + String(heatmapPoint[markersIndex].data[1]['lng']));
 	    if (pinpointsFlag) showMarkersOnIndex();
 	    if (heatmapFlag) showHeatmapOnIndex();
 	    updateLabel();
