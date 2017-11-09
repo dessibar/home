@@ -161,13 +161,8 @@
 	
      }
 	   
-     function initMap(){
-        var options = {
-            zoom:5,
-            center:{lat:62.641066,lng:-12.704159}
-        }  
-        
-        heatmap = new HeatmapOverlay(map, 
+     function initHeatmap(){
+	heatmap = new HeatmapOverlay(map, 
         {
           // radius should be small ONLY if scaleRadius is true (or small radius is intended)
           "radius": 2,
@@ -185,6 +180,13 @@
          // which field name in your data represents the data value - default "value"
          valueField: 'count'
         });
+     }
+	   
+     function initMap(){
+        var options = {
+            zoom:5,
+            center:{lat:62.641066,lng:-12.704159}
+        }  
          
 	infoWindow = new google.maps.InfoWindow();
         map = new google.maps.Map(document.getElementById('map'), options);
