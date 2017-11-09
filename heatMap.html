@@ -66,6 +66,7 @@
  	    console.log("this.status = " + this.status);
    	    if (this.readyState == 4 && this.status == 200) {
    	      myFunction(this);
+	      updateLabel();
 	      if (markersIndex<(maximumSamples-1)) markersIndex = markersIndex + 1;
 	      arrayIndex = 0;
   	    }
