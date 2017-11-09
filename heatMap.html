@@ -291,9 +291,13 @@
           clearMarkers();
 	  clearHeatmap();
           markers = [];
+	  heatmapPoints = [];
 	  for (var i=0;i<maximumSamples;i++) {
 	    markers[i] = [];
-      heatmapPoints[i] = [];
+            heatmapPoints[i] = {
+	      max: 1000,
+	      data: []
+	    }
 	  }
         }
 	   
