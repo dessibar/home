@@ -49,28 +49,29 @@
 	var minLong;
 	var markersIndex;
 	var arrayIndex;
+	var fileIndex;
 	var pinpointsFlag = true;
 	var heatmapFlag = false;
 	
 	function loadXMLDoc(location) {
-	initHeatmap();
-	var xmlhttp = [];
-	markersIndex = 0;
-	deleteMarkers();
-	for (var i=0;i<maximumSamples;i++) {
-	  xmlhttp[i] = new XMLHttpRequest();
-	  arrayIndex = 0;
-	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
-	  xmlhttp[i].send();
-   	  xmlhttp[i].onreadystatechange = parseFile(i);
+	  initHeatmap();
+	  var xmlhttp = [];
+	  markersIndex = 0;
+	  deleteMarkers();
+	  for (var i=0;i<maximumSamples;i++) {
+	    xmlhttp[i] = new XMLHttpRequest();
+	    arrayIndex = 0;
+	    xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
+	    xmlhttp[i].send();
+   	    xmlhttp[i].onreadystatechange = parseFile(i);
+	  }
+	
+	  pinpointsFlag = true;
+	  heatmapFlag = false;
+	
 	}
 	
-	pinpointsFlag = true;
-	heatmapFlag = false;
-	
-	}
-	
-	parseFile(fileIndex) {
+	function parseFile(fileIndex) {
 	  console.log("this.readyState = " + this.readyState);
  	  console.log("this.status = " + this.status);
    	  if (this.readyState == 4 && this.status == 200) {
