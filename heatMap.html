@@ -63,7 +63,9 @@
 	    arrayIndex = 0;
 	    xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	    xmlhttp[i].send();
-   	    xmlhttp[i].onreadystatechange = parseFile(i);
+   	    xmlhttp[i].onreadystatechange = function () {
+	      parseFile(i);
+	    };
 	  }
 	
 	  pinpointsFlag = true;
