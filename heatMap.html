@@ -64,27 +64,24 @@
 	    xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", true)
 	    xmlhttp[i].send();
    	    xmlhttp[i].onreadystatechange = function () {
-	      parseFile(i);
+	      console.log("this.readyState = " + this.readyState);
+ 	      console.log("this.status = " + this.status);
+   	      if (this.readyState == 4 && this.status == 200) {
+ 	        markersIndex = fileIndex;
+   	        myFunction(this);
+	        updateLabel();
+	        if (markersIndex<(maximumSamples-1)) markersIndex = markersIndex + 1;
+	        arrayIndex = 0;
+		      
+   	       }
 	    };
 	  }
 	
 	  pinpointsFlag = true;
 	  heatmapFlag = false;
-	
+		
 	}
-	
-	function parseFile(fileIndex) {
-	  console.log("this.readyState = " + this.readyState);
- 	  console.log("this.status = " + this.status);
-   	  if (this.readyState == 4 && this.status == 200) {
- 	    markersIndex = fileIndex;
-   	    myFunction(this);
-	    updateLabel();
-	//    if (markersIndex<(maximumSamples-1)) markersIndex = markersIndex + 1;
-	    arrayIndex = 0;
-   	  }
-	}
-	   
+
 	function myFunction(xml) {
   	var stockNumber, latLng, distanceArray, latData, lonData, saData, i, j, xmlDoc, txt;
  	xmlDoc = xml.responseXML;
