@@ -62,10 +62,11 @@
 	  arrayIndex = 0;
 	  xmlhttp[i].open("GET", "/home/acoustics/" + location + (i+1) + ".txt.xml", false)
 	  xmlhttp[i].send();
-  	    xmlhttp[i].onreadystatechange = function() {
+ // 	    xmlhttp[i].onreadystatechange = function() {
 	    console.log("this.readyState = " + this.readyState);
  	    console.log("this.status = " + this.status);
-   	    if (this.readyState == 4 && this.status == 200) {
+	    // change != for ==
+   	    while (this.readyState != 4 && this.status != 200) {
    	      myFunction(this);
 	      updateLabel();
 	      if (markersIndex<(maximumSamples-1)) markersIndex = markersIndex + 1;
